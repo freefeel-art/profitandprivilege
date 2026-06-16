@@ -1,4 +1,4 @@
-# Opportunity Scoring Framework v2
+# Opportunity Scoring Framework v3
 
 ## Purpose
 
@@ -30,34 +30,42 @@ Range:
 
 Low score:
 
-Limited competition.
+Crowded market.
 
 High score:
 
-Crowded market.
+Limited competition.
 
 ---
 
 ### 2. Startup Difficulty
 
-Measures implementation difficulty.
+Measures how difficult it is to launch the opportunity.
 
 Range:
 
 1 - 10
+
+High score:
+
+Easy to launch.
+
+Low score:
+
+Difficult to launch.
 
 Factors:
 
 - Technical complexity
 - Required skills
 - Capital requirements
-- Operational complexity
+- Regulatory requirements
 
 ---
 
-### 3. Time To Revenue
+### 3. Fulfillment Difficulty
 
-Measures expected speed to first revenue.
+Measures how difficult it is to deliver results after the first customer is acquired.
 
 Range:
 
@@ -65,63 +73,97 @@ Range:
 
 High score:
 
-Fast path to revenue.
+Easy fulfillment.
 
 Low score:
 
-Long path to revenue.
+Difficult fulfillment.
+
+Factors:
+
+- Operational workload
+- Service delivery complexity
+- Support requirements
+- Ongoing management
+
+---
+
+### 4. Time To Revenue
+
+Measures speed to first meaningful revenue.
+
+Range:
+
+1 - 10
+
+High score:
+
+Fast revenue.
+
+Low score:
+
+Slow revenue.
 
 Factors:
 
 - Build time
-- Sales cycle length
-- Customer onboarding requirements
+- Sales cycle
+- Customer onboarding
 
 ---
 
-### 4. Monetization Potential
+### 5. Economic Potential
 
-Measures revenue potential.
+Measures long-term economic value.
 
 Range:
 
 1 - 10
-
-Factors:
-
-- Pricing power
-- Scalability
-- Recurring revenue potential
-- Market size
-
----
-
-### 5. Distribution Difficulty
-
-Measures how difficult it is to acquire customers.
-
-Range:
-
-1 - 10
-
-Low score:
-
-Easy customer acquisition.
 
 High score:
 
-Difficult customer acquisition.
+Strong economic potential.
+
+Low score:
+
+Weak economic potential.
+
+Factors:
+
+- Revenue potential
+- Recurring revenue
+- Scalability
+- Asset value
+- Exit potential
+
+---
+
+### 6. Distribution Difficulty
+
+Measures customer acquisition difficulty.
+
+Range:
+
+1 - 10
+
+High score:
+
+Easy distribution.
+
+Low score:
+
+Difficult distribution.
 
 Factors:
 
 - Audience accessibility
 - Marketing complexity
-- Advertising costs
 - Sales requirements
+- Advertising costs
 
 ---
 
-### 6. Testability
+### 7. Testability
 
 Measures how easily the opportunity can be validated.
 
@@ -131,79 +173,52 @@ Range:
 
 High score:
 
-Can be tested quickly and cheaply.
+Fast and inexpensive validation.
 
 Low score:
 
-Requires significant time, money or development before validation.
+Expensive or slow validation.
 
 Factors:
 
 - MVP complexity
 - Validation cost
-- Speed of feedback
+- Feedback speed
 - Ease of experimentation
 
 ---
 
 ## Opportunity Score
 
-Opportunity Score is generated from the combined evaluation categories.
-
-Purpose:
-
-Provide a single high-level assessment.
+Opportunity Score is generated from all framework categories.
 
 Range:
 
 1 - 100
 
-The score should never replace the underlying metrics.
+Purpose:
 
-Users must always see the individual category scores.
+Provide a single high-level assessment.
 
----
-
-## Example
-
-Opportunity:
-
-AI Automation Agency
-
-Output:
-
-Competition Score: 7
-
-Startup Difficulty: 6
-
-Time To Revenue: 8
-
-Monetization Potential: 9
-
-Distribution Difficulty: 6
-
-Testability: 8
-
-Opportunity Score: 78
+The detailed category scores must always remain visible.
 
 ---
 
-## Future Expansion
+## Future Metrics
 
-Potential future metrics:
+Not included in MVP:
 
 - Founder Fit
 - Market Timing
 - Competitive Advantage
-- Capital Requirements
-
-Not part of MVP.
+- Personal Interest
+- Capital Availability
 
 ---
 
 ## Version
 
-Framework Version: 2.0
+Framework Version: 3.0
 
 Status:
 
