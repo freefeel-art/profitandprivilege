@@ -77,24 +77,24 @@ export default function Validator() {
 
         {/* 1. Opportunity Score — dominant hero */}
         <section className="rounded-2xl border border-slate-200 bg-white px-8 py-10 shadow-sm text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">{result.date}</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">{result.date}</p>
           <h2 className="mt-2 text-lg font-semibold text-slate-800">{result.name}</h2>
           <div className="mt-8">
             <span className="text-8xl font-bold tracking-tight text-slate-900">{result.score}</span>
             <span className="text-2xl font-normal text-slate-400"> / 100</span>
           </div>
-          <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-slate-400">Opportunity Score</p>
+          <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Opportunity Score</p>
           <div className="mt-5">
             <span className={`inline-flex items-center rounded-full border px-5 py-1.5 text-sm font-semibold ${verdictStyle(result.verdict)}`}>
               {result.verdict}
             </span>
           </div>
-          <p className="mt-8 text-sm leading-relaxed text-slate-500 max-w-lg mx-auto">{result.report.interpretation}</p>
+          <p className="mt-8 text-sm leading-relaxed text-slate-700 max-w-lg mx-auto">{result.report.interpretation}</p>
         </section>
 
         {/* 2. Category Scores */}
         <section>
-          <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-400">Category Analysis</h3>
+          <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Category Analysis</h3>
           <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
             {CATEGORY_ORDER.map((key, i) => (
               <div
@@ -115,7 +115,7 @@ export default function Validator() {
 
         {/* 3. Critical Risks */}
         <section>
-          <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-400">Critical Risks</h3>
+          <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Critical Risks</h3>
           {result.report.risks.length > 0 ? (
             <ul className="space-y-2">
               {result.report.risks.map((r, i) => (
@@ -126,13 +126,13 @@ export default function Validator() {
               ))}
             </ul>
           ) : (
-            <p className="text-sm text-slate-400">No significant risks identified.</p>
+            <p className="text-sm text-slate-500">No significant risks identified.</p>
           )}
         </section>
 
         {/* 4. Recommended Actions */}
         <section>
-          <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-400">Recommended Actions</h3>
+          <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Recommended Actions</h3>
           <ol className="space-y-2">
             {result.report.actions.map((action, i) => (
               <li key={i} className="flex gap-4 rounded-lg border border-slate-200 bg-white px-5 py-4 shadow-sm">
@@ -145,7 +145,7 @@ export default function Validator() {
 
         {/* 5. Key Strengths */}
         <section>
-          <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-400">Key Strengths</h3>
+          <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Key Strengths</h3>
           {result.report.strengths.length > 0 ? (
             <ul className="space-y-2">
               {result.report.strengths.map((s, i) => (
@@ -156,15 +156,15 @@ export default function Validator() {
               ))}
             </ul>
           ) : (
-            <p className="text-sm text-slate-400">No significant strengths identified.</p>
+            <p className="text-sm text-slate-500">No significant strengths identified.</p>
           )}
         </section>
 
         <div className="border-t border-slate-100 pt-6">
-          <p className="mb-5 text-xs text-slate-400">The score is guidance. The score is never the decision.</p>
+          <p className="mb-5 text-xs text-slate-500">The score is guidance. The score is never the decision.</p>
           <button
             onClick={reset}
-            className="text-sm font-medium text-slate-400 underline underline-offset-4 hover:text-slate-700 transition-colors"
+            className="text-sm font-medium text-slate-500 underline underline-offset-4 hover:text-slate-800 transition-colors"
           >
             Evaluate another opportunity
           </button>
@@ -176,7 +176,7 @@ export default function Validator() {
 
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-      <p className="text-sm leading-relaxed text-slate-600">
+      <p className="text-sm leading-relaxed text-slate-700">
         Select a business opportunity to receive a structured evaluation using the
         ProfitAndPrivilege Scoring Framework. The evaluation covers seven categories
         and produces an Opportunity Score from 1 to 100.
