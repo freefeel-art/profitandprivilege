@@ -1,0 +1,4 @@
+[build]
+  base = "apps/opportunity-validator"
+  publish = "dist"
+  command = "npm run build"
