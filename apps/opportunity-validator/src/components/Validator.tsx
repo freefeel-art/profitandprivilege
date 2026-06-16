@@ -42,6 +42,12 @@ function verdictStyle(verdict: string): string {
   return 'bg-red-50 text-red-700 border-red-200';
 }
 
+function scoreIndicator(score: number): string {
+  if (score >= 8) return 'bg-emerald-400';
+  if (score >= 5) return 'bg-amber-400';
+  return 'bg-red-400';
+}
+
 export default function Validator() {
   const [selected, setSelected] = useState('');
   const [result, setResult] = useState<EvaluationResult | null>(null);
@@ -67,149 +73,139 @@ export default function Validator() {
 
   if (result) {
     return (
-      <div className="space-y-8">
+      <div className="space-y-6">
 
-        {/* 1. Opportunity Summary */}
-        <section className="rounded-lg border border-gray-200 p-6">
-          <div className="flex flex-wrap items-start justify-between gap-4">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-gray-400">Opportunity</p>
-              <h2 className="mt-1 text-2xl font-bold text-gray-900">{result.name}</h2>
-              <p className="mt-1 text-sm text-gray-400">{result.date}</p>
-            </div>
-            <div className="text-right">
-              <p className="text-xs font-semibold uppercase tracking-widest text-gray-400">Opportunity Score</p>
-              <p className="mt-1">
-                <span className="text-5xl font-bold text-gray-900">{result.score}</span>
-                <span className="text-lg font-normal text-gray-400"> / 100</span>
-              </p>
-            </div>
+        {/* 1. Opportunity Score — dominant hero */}
+        <section className="rounded-2xl border border-slate-200 bg-white px-8 py-10 shadow-sm text-center">
+          <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">{result.date}</p>
+          <h2 className="mt-2 text-lg font-semibold text-slate-800">{result.name}</h2>
+          <div className="mt-8">
+            <span className="text-8xl font-bold tracking-tight text-slate-900">{result.score}</span>
+            <span className="text-2xl font-normal text-slate-400"> / 100</span>
           </div>
+          <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-slate-400">Opportunity Score</p>
+          <div className="mt-5">
+            <span className={`inline-flex items-center rounded-full border px-5 py-1.5 text-sm font-semibold ${verdictStyle(result.verdict)}`}>
+              {result.verdict}
+            </span>
+          </div>
+          <p className="mt-8 text-sm leading-relaxed text-slate-500 max-w-lg mx-auto">{result.report.interpretation}</p>
         </section>
 
         {/* 2. Category Scores */}
         <section>
-          <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-gray-400">Category Scores</h3>
-          <div className="overflow-hidden rounded-lg border border-gray-100">
+          <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-400">Category Analysis</h3>
+          <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
             {CATEGORY_ORDER.map((key, i) => (
               <div
                 key={key}
-                className={`flex items-center justify-between px-4 py-3 ${i < CATEGORY_ORDER.length - 1 ? 'border-b border-gray-100' : ''}`}
+                className={`flex items-center justify-between px-5 py-4 ${i < CATEGORY_ORDER.length - 1 ? 'border-b border-slate-100' : ''}`}
               >
-                <span className="text-sm text-gray-700">{CATEGORY_LABELS[key]}</span>
-                <span className="font-mono text-sm font-semibold text-gray-900">
-                  {result.scores[key]} / 10
-                </span>
+                <span className="text-sm font-medium text-slate-700">{CATEGORY_LABELS[key]}</span>
+                <div className="flex items-center gap-3">
+                  <div className={`h-2 w-2 rounded-full ${scoreIndicator(result.scores[key])}`} />
+                  <span className="font-mono text-sm font-semibold text-slate-900">
+                    {result.scores[key]}<span className="font-normal text-slate-400"> / 10</span>
+                  </span>
+                </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* 3. Strengths */}
+        {/* 3. Critical Risks */}
         <section>
-          <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-gray-400">Strengths</h3>
-          {result.report.strengths.length > 0 ? (
-            <ul className="space-y-2">
-              {result.report.strengths.map((s, i) => (
-                <li key={i} className="flex gap-2 text-sm text-gray-700">
-                  <span className="mt-0.5 flex-shrink-0 font-bold text-green-500">+</span>
-                  <span>{s}</span>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="text-sm text-gray-400">No significant strengths identified.</p>
-          )}
-        </section>
-
-        {/* 4. Risks */}
-        <section>
-          <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-gray-400">Risks</h3>
+          <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-400">Critical Risks</h3>
           {result.report.risks.length > 0 ? (
             <ul className="space-y-2">
               {result.report.risks.map((r, i) => (
-                <li key={i} className="flex gap-2 text-sm text-gray-700">
-                  <span className="mt-0.5 flex-shrink-0 font-bold text-red-400">−</span>
-                  <span>{r}</span>
+                <li key={i} className="flex gap-3 rounded-lg bg-red-50 px-4 py-3 text-sm text-red-800">
+                  <span className="flex-shrink-0 font-bold leading-5 text-red-400">−</span>
+                  <span className="leading-relaxed">{r}</span>
                 </li>
               ))}
             </ul>
           ) : (
-            <p className="text-sm text-gray-400">No significant risks identified.</p>
+            <p className="text-sm text-slate-400">No significant risks identified.</p>
           )}
         </section>
 
-        {/* 5. Interpretation */}
+        {/* 4. Recommended Actions */}
         <section>
-          <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-gray-400">Interpretation</h3>
-          <p className="text-sm leading-relaxed text-gray-700">{result.report.interpretation}</p>
-        </section>
-
-        {/* 6. Recommended Actions */}
-        <section>
-          <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-gray-400">Recommended Actions</h3>
+          <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-400">Recommended Actions</h3>
           <ol className="space-y-2">
             {result.report.actions.map((action, i) => (
-              <li key={i} className="flex gap-3 text-sm text-gray-700">
-                <span className="w-4 flex-shrink-0 font-mono font-semibold text-gray-400">{i + 1}.</span>
-                <span>{action}</span>
+              <li key={i} className="flex gap-4 rounded-lg border border-slate-200 bg-white px-5 py-4 shadow-sm">
+                <span className="flex-shrink-0 w-5 font-mono text-xs font-bold text-slate-300 mt-0.5">{i + 1}.</span>
+                <span className="text-sm leading-relaxed text-slate-700">{action}</span>
               </li>
             ))}
           </ol>
         </section>
 
-        {/* 7. Verdict */}
-        <section className="border-t border-gray-100 pt-6">
-          <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-gray-400">Verdict</h3>
-          <span className={`inline-flex items-center rounded-full border px-4 py-1.5 text-sm font-bold ${verdictStyle(result.verdict)}`}>
-            {result.verdict}
-          </span>
-          <p className="mt-6 text-xs text-gray-400">
-            The score is guidance. The score is never the decision.
-          </p>
+        {/* 5. Key Strengths */}
+        <section>
+          <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-400">Key Strengths</h3>
+          {result.report.strengths.length > 0 ? (
+            <ul className="space-y-2">
+              {result.report.strengths.map((s, i) => (
+                <li key={i} className="flex gap-3 rounded-lg bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
+                  <span className="flex-shrink-0 font-bold leading-5 text-emerald-500">+</span>
+                  <span className="leading-relaxed">{s}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="text-sm text-slate-400">No significant strengths identified.</p>
+          )}
         </section>
 
-        <button
-          onClick={reset}
-          className="text-sm text-gray-400 underline hover:text-gray-700 transition-colors"
-        >
-          Evaluate another opportunity
-        </button>
+        <div className="border-t border-slate-100 pt-6">
+          <p className="mb-5 text-xs text-slate-400">The score is guidance. The score is never the decision.</p>
+          <button
+            onClick={reset}
+            className="text-sm font-medium text-slate-400 underline underline-offset-4 hover:text-slate-700 transition-colors"
+          >
+            Evaluate another opportunity
+          </button>
+        </div>
 
       </div>
     );
   }
 
   return (
-    <div className="space-y-6">
-      <p className="text-sm leading-relaxed text-gray-600">
+    <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+      <p className="text-sm leading-relaxed text-slate-600">
         Select a business opportunity to receive a structured evaluation using the
         ProfitAndPrivilege Scoring Framework. The evaluation covers seven categories
         and produces an Opportunity Score from 1 to 100.
       </p>
-      <div className="space-y-3">
-        <label htmlFor="opportunity" className="block text-sm font-medium text-gray-700">
-          Opportunity
-        </label>
-        <select
-          id="opportunity"
-          value={selected}
-          onChange={(e) => setSelected(e.target.value)}
-          className="w-full rounded-md border border-gray-300 bg-white px-3 py-2.5 text-sm text-gray-900 focus:border-gray-900 focus:outline-none focus:ring-1 focus:ring-gray-900"
-        >
-          <option value="">Select an opportunity...</option>
-          {REGISTRY.map((entry) => (
-            <option key={entry.name} value={entry.name}>
-              {entry.name}
-            </option>
-          ))}
-        </select>
+      <div className="mt-7 space-y-4">
+        <div>
+          <label htmlFor="opportunity" className="block mb-2 text-xs font-semibold uppercase tracking-widest text-slate-500">
+            Opportunity
+          </label>
+          <select
+            id="opportunity"
+            value={selected}
+            onChange={(e) => setSelected(e.target.value)}
+            className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 focus:border-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900/10 transition-shadow"
+          >
+            <option value="">Select an opportunity...</option>
+            {REGISTRY.map((entry) => (
+              <option key={entry.name} value={entry.name}>
+                {entry.name}
+              </option>
+            ))}
+          </select>
+        </div>
         <button
           onClick={evaluate}
           disabled={!selected}
-          className="w-full rounded-md bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-gray-700 disabled:cursor-not-allowed disabled:opacity-40"
+          className="w-full rounded-lg bg-slate-900 px-4 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:bg-slate-700 active:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-40"
         >
-          Evaluate
+          Evaluate Opportunity
         </button>
       </div>
     </div>
