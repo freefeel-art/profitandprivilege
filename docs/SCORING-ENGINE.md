@@ -8,14 +8,15 @@ The scoring engine must be transparent, explainable and reproducible.
 
 ---
 
-## Input Metrics
+## Evaluation Categories
 
 1. Competition Score
 2. Startup Difficulty
-3. Time To Revenue
-4. Monetization Potential
-5. Distribution Difficulty
-6. Testability
+3. Fulfillment Difficulty
+4. Time To Revenue
+5. Economic Potential
+6. Distribution Difficulty
+7. Testability
 
 Range:
 
@@ -23,39 +24,22 @@ Range:
 
 ---
 
-## Positive Factors
-
-Higher is better:
-
-- Time To Revenue
-- Monetization Potential
-- Testability
-
----
-
-## Negative Factors
-
-Lower is better:
-
-- Competition Score
-- Startup Difficulty
-- Distribution Difficulty
-
----
-
 ## Weighting
 
 Competition Score:
-15%
+10%
 
 Startup Difficulty:
+10%
+
+Fulfillment Difficulty:
 15%
 
 Time To Revenue:
-20%
+10%
 
-Monetization Potential:
-25%
+Economic Potential:
+30%
 
 Distribution Difficulty:
 15%
@@ -68,43 +52,84 @@ Total:
 
 ---
 
+## Weighting Philosophy
+
+Economic Potential receives the highest weighting.
+
+Reason:
+
+The purpose of the framework is to identify valuable long-term opportunities rather than short-term wins.
+
+Businesses with:
+
+- recurring revenue
+- scalability
+- asset value
+- leverage
+- exit potential
+
+should outperform businesses that simply generate fast cash.
+
+---
+
 ## Opportunity Score
 
 Range:
 
 1 - 100
 
+Formula:
+
+Weighted average of all evaluation categories.
+
 Purpose:
 
 Provide a single summary score.
 
-The detailed category scores always remain visible.
+The score is a guide.
+
+The score is never the decision.
 
 ---
 
-## Interpretation
+## Score Interpretation
 
-90-100
+90 - 100
 
 Exceptional Opportunity
 
+Rare combination of:
+
+- strong economics
+- scalability
+- defensibility
+- practical execution
+
 ---
 
-75-89
+75 - 89
 
 Strong Opportunity
 
+Worth serious consideration.
+
 ---
 
-60-74
+60 - 74
 
 Viable Opportunity
 
+Potentially attractive depending on circumstances.
+
 ---
 
-40-59
+40 - 59
 
 Weak Opportunity
+
+Requires caution.
+
+Significant weaknesses exist.
 
 ---
 
@@ -112,28 +137,46 @@ Below 40
 
 Poor Opportunity
 
+Likely unsuitable.
+
+Requires exceptional circumstances to justify pursuit.
+
 ---
 
-## Rule
-
-Users must never see only the Opportunity Score.
+## Display Rules
 
 Users must always see:
 
-- Individual scores
+- Opportunity Score
+- Individual category scores
 - Strengths
 - Risks
 - Recommended actions
 
-The score is guidance.
+The Opportunity Score alone is insufficient.
 
-Not a decision.
+---
+
+## Design Principle
+
+The framework should favor:
+
+- scalable businesses
+- recurring revenue
+- asset creation
+- leverage
+
+The framework should not automatically favor:
+
+- quick wins
+- easy startups
+- low-barrier opportunities
 
 ---
 
 ## Version
 
-1.0
+2.0
 
 Status:
 
