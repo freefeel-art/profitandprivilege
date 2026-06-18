@@ -1,0 +1,71 @@
+---
+import { clusters } from '../lib/clusters';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Market Discovery | ProfitAndPrivilege</title>
+  </head>
+  <body class="bg-slate-50 text-slate-900 font-sans antialiased">
+    <main class="max-w-[800px] mx-auto px-4 py-16">
+      
+      <header class="mb-16 text-center">
+        <p class="text-xs font-bold tracking-widest text-slate-500 uppercase mb-3">ProfitAndPrivilege</p>
+        <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Market Discovery</h1>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+          High-conviction market gaps synthesized from live research. These are validated problems actively looking for solutions.
+        </p>
+      </header>
+
+      <div class="space-y-12">
+        {clusters.map((cluster) => (
+          <article class="bg-white border border-slate-200 shadow-sm rounded-xl overflow-hidden">
+            
+            <div class="p-6 sm:p-8">
+              <h2 class="text-2xl font-bold text-slate-900 mb-2">{cluster.title}</h2>
+              <p class="text-lg text-slate-700 leading-relaxed mb-8">{cluster.description}</p>
+
+              <div class="mb-8">
+                <h3 class="text-xs font-bold tracking-widest text-slate-500 uppercase mb-3">Market Evidence</h3>
+                <div class="bg-slate-50 border-l-4 border-slate-300 p-5 rounded-r-md">
+                  <p class="text-slate-700 leading-relaxed">{cluster.evidence}</p>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-xs font-bold tracking-widest text-slate-500 uppercase mb-3">Recommended Approaches</h3>
+                <ul class="space-y-3">
+                  {cluster.approaches.map((approach) => (
+                    <li class="flex items-start">
+                      <svg class="h-5 w-5 text-slate-400 mr-3 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span class="text-slate-700">{approach}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-slate-50 border-t border-slate-100 p-6 sm:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-5">
+              <div>
+                <p class="text-xs font-bold tracking-widest text-slate-500 uppercase mb-1">Primary Opportunity Type</p>
+                <p class="text-lg font-semibold text-slate-900">{cluster.primaryCategory}</p>
+              </div>
+              <a 
+                href="/" 
+                class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-sm font-medium rounded-md text-white bg-slate-900 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900 transition-colors w-full sm:w-auto"
+              >
+                Evaluate Opportunity
+              </a>
+            </div>
+
+          </article>
+        ))}
+      </div>
+
+    </main>
+  </body>
+</html>
