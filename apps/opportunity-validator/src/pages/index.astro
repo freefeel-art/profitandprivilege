@@ -1,5 +1,7 @@
 ---
 import Validator from '../components/Validator';
+
+const clusterId = Astro.url.searchParams.get('cluster');
 ---
 
 <!DOCTYPE html>
@@ -22,7 +24,7 @@ import Validator from '../components/Validator';
         <div class="mt-5 h-px bg-slate-200"></div>
       </header>
       <main>
-        <Validator client:load />
+        <Validator initialClusterId={clusterId} client:load />
       </main>
       <footer class="mt-16 border-t border-slate-200 pt-6">
         <p class="text-sm font-semibold text-slate-800">ProfitAndPrivilege<span class="font-normal text-slate-400"> · Opportunity Intelligence</span></p>
