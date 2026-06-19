@@ -4,14 +4,19 @@ When switching to a new chat, always complete the following procedure first.
 
 ## Chat Closing Procedure
 
-1. Update PROJECT_STATUS.md
+1. Review PROJECT_STATUS.md
 
+   Determine whether project status has changed during the session.
+
+2. Update PROJECT_STATUS.md if needed
+
+   Update:
    - Current State
    - Completed Work
    - Next Task
    - Last Decision
 
-2. Create Session Summary
+3. Create Session Summary
 
    Include:
    - What was completed
@@ -20,7 +25,7 @@ When switching to a new chat, always complete the following procedure first.
    - Important discoveries
    - Next task
 
-3. Commit and Push
+4. Commit and Push
 
    Example:
 
@@ -28,9 +33,11 @@ When switching to a new chat, always complete the following procedure first.
    git commit -m "Session update" && \
    git push
 
-4. Verify Next Task
+5. Verify Next Task
 
    There must always be exactly one clearly defined next task.
+
+6. Switch Chat
 
 ## Chat Opening Procedure
 
