@@ -37,23 +37,34 @@ Not used for implementation:
 
 ## Next Task
 
-Expand problem cluster library.
+Expand Opportunity Validator cluster library.
 
 Target:
-10-20 high quality clusters.
+- 10–20 high-quality problem clusters
 
-## After That
+Success Criteria:
+- Clusters visible in Discover
+- Evaluation works for all clusters
+- Build passes
 
-Deploy MVP.
-Collect feedback.
+## Blockers
 
-## Do Not Build Yet
+None
 
+## Last Decision
+
+Validate Opportunity Validator before building:
 - Commander
 - Dashboard
 - Accounts
 - Payments
 - Data Layer
 
-Reason:
-Validate Opportunity Validator first.
+## Notes
+
+This file is the operational source of truth.
+
+When starting a new chat:
+1. Read PROJECT_STATUS.md
+2. Continue from Next Task
+3. Update this file at the end of the work session
