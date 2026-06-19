@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { REGISTRY } from '../lib/registry';
 import type { CategoryScores } from '../lib/registry';
 import { calculateOpportunityScore, getVerdict } from '../lib/scoring';
 import { generateReport } from '../lib/report';
 import type { Report } from '../lib/report';
+import { clusters } from '../lib/clusters';
+import type { ProblemCluster } from '../lib/clusters';
 
 interface EvaluationResult {
   name: string;
@@ -13,6 +15,7 @@ interface EvaluationResult {
   scores: CategoryScores;
   report: Report;
 }
+
 
 const CATEGORY_LABELS: Record<keyof CategoryScores, string> = {
   competition: 'Competition Score',
@@ -51,10 +54,31 @@ function scoreIndicator(score: number): string {
 export default function Validator() {
   const [selected, setSelected] = useState('');
   const [result, setResult] = useState<EvaluationResult | null>(null);
+  const [activeCluster, setActiveCluster] = useState<ProblemCluster | null>(null);
+  const [initialClusterId, setInitialClusterId] = useState<string | null>(null);
 
-  function evaluate() {
-    const entry = REGISTRY.find((e) => e.name === selected);
+  useEffect(() => {
+    const clusterId = new URLSearchParams(window.location.search).get('cluster');
+    setInitialClusterId(clusterId);
+  }, []);
+
+  useEffect(() => {
+    if (initialClusterId) {
+      const matchedCluster = clusters.find(c => c.id === initialClusterId);
+      if (matchedCluster) {
+        setActiveCluster(matchedCluster);
+        setSelected(matchedCluster.primaryCategory);
+        evaluate(matchedCluster.primaryCategory);
+      }
+    }
+  }, [initialClusterId]);
+
+  function evaluate(categoryOverride?: string) {
+    // typeof check prevents React onClick event objects from being used as the category string
+    const targetCategory = typeof categoryOverride === 'string' ? categoryOverride : selected;
+    const entry = REGISTRY.find((e) => e.name === targetCategory);
     if (!entry) return;
+    
     const score = calculateOpportunityScore(entry.scores);
     const verdict = getVerdict(score);
     const report = generateReport(entry.name, entry.scores);
@@ -69,11 +93,26 @@ export default function Validator() {
   function reset() {
     setSelected('');
     setResult(null);
+    setActiveCluster(null);
   }
 
   if (result) {
     return (
       <div className="space-y-6">
+
+        {activeCluster && (
+          <>
+            <section className="rounded-2xl bg-slate-900 px-8 py-5 shadow-sm">
+              <p className="text-sm font-medium text-slate-300">
+                Evaluating: <span className="font-bold text-white">{activeCluster.primaryCategory}</span> for {activeCluster.title}
+              </p>
+            </section>
+            <section className="rounded-2xl border border-slate-200 bg-slate-50 px-8 py-6 shadow-sm">
+              <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Market Context</h3>
+              <p className="text-sm leading-relaxed text-slate-700">{activeCluster.evidence}</p>
+            </section>
+          </>
+        )}
 
         {/* 1. Opportunity Score — dominant hero */}
         <section className="rounded-2xl border border-slate-200 bg-white px-8 py-10 shadow-sm text-center">
