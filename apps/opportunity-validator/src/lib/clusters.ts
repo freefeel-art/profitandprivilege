@@ -73,5 +73,70 @@ export const clusters: ProblemCluster[] = [
     ],
     primaryCategory: "Local Business",
     modifier: 3
+  },
+  {
+    id: "customer-retention",
+    title: "Customer Retention & Churn",
+    description: "Businesses struggle to retain customers and lose recurring revenue due to poor onboarding, weak engagement, and inconsistent follow-up.",
+    evidence: "Retention problems appear repeatedly across SaaS, agencies, and local businesses. Many operators focus on acquisition while ignoring the economics of churn.",
+    approaches: [
+      "Customer success systems",
+      "Retention automation",
+      "Subscription optimization services"
+    ],
+    primaryCategory: "Consulting",
+    modifier: 7
+  },
+  {
+    id: "appointment-scheduling",
+    title: "Appointment Scheduling Chaos",
+    description: "Service businesses waste significant time coordinating appointments, reminders, cancellations, and follow-up communication.",
+    evidence: "Missed appointments and administrative overload remain common complaints among local service providers.",
+    approaches: [
+      "AI scheduling assistants",
+      "Automated reminders",
+      "Booking workflow automation"
+    ],
+    primaryCategory: "AI Agency",
+    modifier: 6
+  },
+  {
+    id: "knowledge-management",
+    title: "Internal Knowledge Loss",
+    description: "Organizations lose operational knowledge when employees leave or critical information remains trapped in documents and chats.",
+    evidence: "Distributed teams frequently report duplicated work, slow onboarding, and excessive dependence on key individuals.",
+    approaches: [
+      "Knowledge bases",
+      "AI documentation systems",
+      "Operational playbooks"
+    ],
+    primaryCategory: "Micro SaaS",
+    modifier: 6
+  },
+  {
+    id: "compliance-documentation",
+    title: "Compliance & Documentation Burden",
+    description: "Businesses struggle with regulatory paperwork, reporting obligations, and documentation requirements.",
+    evidence: "Administrative burden continues increasing while smaller organizations lack dedicated compliance resources.",
+    approaches: [
+      "Documentation automation",
+      "Compliance workflow systems",
+      "Industry-specific reporting tools"
+    ],
+    primaryCategory: "AI Agency",
+    modifier: 5
+  },
+  {
+    id: "online-reputation",
+    title: "Online Reputation Management",
+    description: "Poor reviews, inconsistent listings, and unmanaged customer feedback directly reduce revenue.",
+    evidence: "Review-driven purchasing behavior continues to increase across most local service industries.",
+    approaches: [
+      "Review generation systems",
+      "Reputation monitoring",
+      "Local visibility optimization"
+    ],
+    primaryCategory: "Local Business",
+    modifier: 5
   }
 ];
