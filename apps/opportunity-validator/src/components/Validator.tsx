@@ -136,46 +136,6 @@ export default function Validator() {
           <p className="mt-8 text-sm leading-relaxed text-slate-700 max-w-lg mx-auto">{result.report.interpretation}</p>
         </section>
 
-        {activeCluster && (
-          <section className="rounded-2xl border border-slate-200 bg-white px-8 py-8 shadow-sm">
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-widest text-slate-500">
-              Recommended Opportunity
-            </h3>
-
-            <h2 className="text-2xl font-bold text-slate-900">
-              {activeCluster.recommendedOpportunity}
-            </h2>
-
-            <div className="mt-6">
-              <h4 className="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">
-                Why This Opportunity
-              </h4>
-
-              <ul className="space-y-2">
-                {activeCluster.why.map((item, i) => (
-                  <li
-                    key={i}
-                    className="flex gap-3 rounded-lg bg-emerald-50 px-4 py-3 text-sm text-emerald-800"
-                  >
-                    <span className="font-bold text-emerald-500">+</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="mt-6 rounded-lg border border-slate-200 bg-slate-50 p-4">
-              <h4 className="mb-2 text-xs font-semibold uppercase tracking-widest text-slate-500">
-                First Action
-              </h4>
-
-              <p className="text-sm leading-relaxed text-slate-700">
-                {activeCluster.firstAction}
-              </p>
-            </div>
-          </section>
-        )}
-
         {/* 2. Category Scores */}
         <section>
           <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Category Analysis</h3>

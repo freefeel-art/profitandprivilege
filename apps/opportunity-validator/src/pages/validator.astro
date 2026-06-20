@@ -1,0 +1,33 @@
+---
+import Validator from '../components/Validator';
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Evaluate business opportunities using a structured scoring framework." />
+    <title>Opportunity Validator — ProfitAndPrivilege</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <script data-goatcounter="https://profitandprivilege.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  </head>
+  <body class="min-h-screen bg-slate-50 font-sans antialiased">
+    <div class="mx-auto max-w-[940px] px-6 py-16">
+      <header class="mb-12">
+        <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-400">ProfitAndPrivilege</p>
+        <h1 class="text-3xl font-bold tracking-tight text-slate-900">Opportunity Validator</h1>
+        <div class="mt-5 h-px bg-slate-200"></div>
+      </header>
+      <main>
+        <Validator client:load />
+      </main>
+      <footer class="mt-16 border-t border-slate-200 pt-6">
+        <p class="text-sm font-semibold text-slate-800">ProfitAndPrivilege<span class="font-normal text-slate-400"> · Opportunity Intelligence</span></p>
+      </footer>
+    </div>
+  </body>
+</html>

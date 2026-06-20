@@ -6,9 +6,6 @@ export interface ProblemCluster {
   approaches: string[];
   primaryCategory: string;
   modifier: number;
-  recommendedOpportunity: string;
-  why: string[];
-  firstAction: string;
 }
 
 export const clusters: ProblemCluster[] = [
@@ -23,14 +20,7 @@ export const clusters: ProblemCluster[] = [
       "Automated reporting and dashboard generation"
     ],
     primaryCategory: "AI Agency",
-    modifier: 8,
-    recommendedOpportunity: "AI Workflow Automation Agency",
-    why: [
-      "Fast path to revenue",
-      "Clear business pain",
-      "Can later evolve into software"
-    ],
-    firstAction: "Interview 5 businesses and document one repetitive workflow."
+    modifier: 8
   },
   {
     id: "customer-acquisition",
@@ -43,28 +33,7 @@ export const clusters: ProblemCluster[] = [
       "Niche-specific SEO content services"
     ],
     primaryCategory: "Consulting",
-    modifier: 6,
-    recommendedOpportunity: "Internal Knowledge SaaS",
-    why: [
-      "Growing remote-work demand",
-      "High organizational value",
-      "Can become recurring software revenue"
-    ],
-    firstAction: "Document one onboarding process that depends on a single employee.",
-    recommendedOpportunity: "AI Appointment Setting Agency",
-    why: [
-      "Immediate business value",
-      "Easy to automate",
-      "Fast client acquisition"
-    ],
-    firstAction: "Speak with 5 service businesses about booking friction and no-shows.",
-    recommendedOpportunity: "Lead Generation Agency",
-    why: [
-      "Strong market demand",
-      "Easy validation",
-      "Recurring client relationships"
-    ],
-    firstAction: "Contact 10 businesses and ask where their leads currently come from."
+    modifier: 6
   },
   {
     id: "tool-fragmentation",
@@ -77,28 +46,7 @@ export const clusters: ProblemCluster[] = [
       "Micro-integrations bridging non-communicating platforms"
     ],
     primaryCategory: "Micro SaaS",
-    modifier: 5,
-    recommendedOpportunity: "Reputation Management Agency",
-    why: [
-      "Direct revenue impact",
-      "Easy to demonstrate results",
-      "Simple service delivery"
-    ],
-    firstAction: "Review 20 local businesses and identify review-management failures.",
-    recommendedOpportunity: "Compliance Automation SaaS",
-    why: [
-      "Mandatory business need",
-      "Low customer churn",
-      "Strong automation opportunity"
-    ],
-    firstAction: "Identify an industry with recurring documentation requirements.",
-    recommendedOpportunity: "Vertical Micro SaaS",
-    why: [
-      "Recurring revenue potential",
-      "High switching costs",
-      "Scalable delivery model"
-    ],
-    firstAction: "Identify one workflow that currently requires three or more tools."
+    modifier: 5
   },
   {
     id: "hiring-signal",
@@ -111,14 +59,7 @@ export const clusters: ProblemCluster[] = [
       "Skill-specific assessment and filtering services"
     ],
     primaryCategory: "Micro SaaS",
-    modifier: 4,
-    recommendedOpportunity: "Curated Talent Marketplace",
-    why: [
-      "High-value business problem",
-      "Niche positioning opportunity",
-      "Strong network effects"
-    ],
-    firstAction: "Interview 5 hiring managers about their screening process."
+    modifier: 4
   },
   {
     id: "cash-flow",
@@ -131,14 +72,7 @@ export const clusters: ProblemCluster[] = [
       "Milestone-based billing and escrow templates"
     ],
     primaryCategory: "Local Business",
-    modifier: 3,
-    recommendedOpportunity: "Accounts Receivable Service",
-    why: [
-      "Direct financial impact",
-      "Easy ROI demonstration",
-      "Repeatable service model"
-    ],
-    firstAction: "Talk to 5 businesses with recurring invoicing problems."
+    modifier: 3
   },
   {
     id: "customer-retention",
@@ -151,14 +85,7 @@ export const clusters: ProblemCluster[] = [
       "Subscription optimization services"
     ],
     primaryCategory: "Consulting",
-    modifier: 7,
-    recommendedOpportunity: "Customer Success Optimization Service",
-    why: [
-      "Improves customer lifetime value",
-      "Businesses already spend money on retention",
-      "Measurable outcomes"
-    ],
-    firstAction: "Analyze where customers drop off in a business funnel."
+    modifier: 7
   },
   {
     id: "appointment-scheduling",
