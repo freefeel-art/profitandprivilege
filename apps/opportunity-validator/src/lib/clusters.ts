@@ -5,6 +5,7 @@ export interface ProblemCluster {
   evidence: string;
   approaches: string[];
   primaryCategory: string;
+  modifier: number;
 }
 
 export const clusters: ProblemCluster[] = [
@@ -18,7 +19,8 @@ export const clusters: ProblemCluster[] = [
       "Custom internal tooling for data synchronization",
       "Automated reporting and dashboard generation"
     ],
-    primaryCategory: "AI Agency"
+    primaryCategory: "AI Agency",
+    modifier: 8
   },
   {
     id: "customer-acquisition",
@@ -30,7 +32,8 @@ export const clusters: ProblemCluster[] = [
       "Done-for-you cold outreach infrastructure",
       "Niche-specific SEO content services"
     ],
-    primaryCategory: "Consulting"
+    primaryCategory: "Consulting",
+    modifier: 6
   },
   {
     id: "tool-fragmentation",
@@ -42,7 +45,8 @@ export const clusters: ProblemCluster[] = [
       "All-in-one tools for narrow, underserved industries",
       "Micro-integrations bridging non-communicating platforms"
     ],
-    primaryCategory: "Micro SaaS"
+    primaryCategory: "Micro SaaS",
+    modifier: 5
   },
   {
     id: "hiring-signal",
@@ -54,7 +58,8 @@ export const clusters: ProblemCluster[] = [
       "Reverse talent directories for pre-vetted candidates",
       "Skill-specific assessment and filtering services"
     ],
-    primaryCategory: "Micro SaaS"
+    primaryCategory: "Micro SaaS",
+    modifier: 4
   },
   {
     id: "cash-flow",
@@ -66,6 +71,7 @@ export const clusters: ProblemCluster[] = [
       "Fractional accounts receivable management",
       "Milestone-based billing and escrow templates"
     ],
-    primaryCategory: "Local Business"
+    primaryCategory: "Local Business",
+    modifier: 3
   }
 ];

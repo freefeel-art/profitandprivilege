@@ -68,18 +68,23 @@ export default function Validator() {
       if (matchedCluster) {
         setActiveCluster(matchedCluster);
         setSelected(matchedCluster.primaryCategory);
-        evaluate(matchedCluster.primaryCategory);
+        evaluate(matchedCluster.primaryCategory, matchedCluster.modifier);
       }
     }
   }, [initialClusterId]);
 
-  function evaluate(categoryOverride?: string) {
+  function evaluate(categoryOverride?: string, clusterModifier: number = 0) {
     // typeof check prevents React onClick event objects from being used as the category string
     const targetCategory = typeof categoryOverride === 'string' ? categoryOverride : selected;
     const entry = REGISTRY.find((e) => e.name === targetCategory);
     if (!entry) return;
     
-    const score = calculateOpportunityScore(entry.scores);
+    const baseScore = calculateOpportunityScore(entry.scores);
+
+    const score = Math.max(
+      0,
+      Math.min(100, baseScore + clusterModifier)
+    );
     const verdict = getVerdict(score);
     const report = generateReport(entry.name, entry.scores);
     const date = new Date().toLocaleDateString('en-US', {
