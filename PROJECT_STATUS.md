@@ -1,70 +1,109 @@
 # PROJECT STATUS
 
-Last Updated: 2026-06-19
+Last Updated: 2026-06-20
 
-## Current Priority
+## Current Direction
 
-Opportunity Validator MVP
+Opportunity Validator has shifted from a category-scoring tool toward an opportunity discovery platform.
 
-## Current State
+Previous model:
 
-Status: Working
-Build: Passing
-Deploy: Not completed
+Category → Score
 
-## Active Development Environment
+Current model:
 
-Primary:
-- Linux terminal
-- Gemini CLI
+Problem → Opportunity
 
-Secondary:
-- ChatGPT (planning, review)
-- AI Studio (analysis only)
+The user begins with a validated market problem and is guided toward a potential business opportunity.
 
-Not used for implementation:
-- AI Studio code execution
-
-## Current Working Directory
-
-~/profitandprivilege/apps/opportunity-validator
+---
 
 ## Completed
 
-- Opportunity Validator MVP built
-- Evaluation flow working
-- Discover flow working
+### Infrastructure
 
-## Next Task
+- Repository synchronized across development machines
+- SSH authentication verified
+- Local development environment operational
+- Astro build process stable
 
-Expand Opportunity Validator cluster library.
+### Validator Engine
 
-Target:
-- 10–20 high-quality problem clusters
+- Opportunity scoring system operational
+- Cluster modifier system implemented
+- Score adjustment logic active
+- Build verified after modifier implementation
 
-Success Criteria:
-- Clusters visible in Discover
-- Evaluation works for all clusters
-- Build passes
+### Discovery System
 
-## Blockers
+- Expanded from 5 to 10 problem clusters
+- Discovery page operational
+- Market evidence and recommended approaches displayed
+- Problem-first navigation established
 
-None
+### Routing
 
-## Last Decision
+Current route structure:
 
-Validate Opportunity Validator before building:
-- Commander
-- Dashboard
-- Accounts
-- Payments
-- Data Layer
+- / → redirects to /discover
+- /discover → problem discovery interface
+- /validator?cluster=... → opportunity evaluation
 
-## Notes
+Validator moved off the homepage and into a dedicated route.
 
-This file is the operational source of truth.
+---
 
-When starting a new chat:
-1. Read PROJECT_STATUS.md
-2. Continue from Next Task
-3. Update this file at the end of the work session
+## Current Product Flow
+
+Problem Discovery
+
+↓
+
+Select Problem Cluster
+
+↓
+
+Opportunity Evaluation
+
+↓
+
+Opportunity Score
+
+↓
+
+Decision Support
+
+---
+
+## Work In Progress
+
+### Opportunity Recommendation System
+
+Fields added to cluster model:
+
+- recommendedOpportunity
+- why[]
+- firstAction
+
+Initial implementation exposed data integrity issues inside clusters.ts.
+
+Feature temporarily rolled back pending clean reconstruction.
+
+---
+
+## Next Priorities
+
+1. Repair Opportunity Recommendation data model
+2. Reintroduce Recommendation UI
+3. Expand cluster library beyond 10 clusters
+4. Prepare first public MVP deployment
+
+---
+
+## MVP Success Condition
+
+A visitor leaves the site with a clear answer to:
+
+"What business opportunity should I investigate next?"
+
+The project should prioritize decision support over raw scoring.
