@@ -1,3 +1,439 @@
 ---
-return Astro.redirect('/discover');
+// index.astro
 ---
+
+<style is:global>
+    /* 
+     * CSS Variables for consistent theming and maintainability 
+     */
+    :root {
+        --color-background: #fdfdfd;
+        --color-text-primary: #1a1a1a;
+        --color-text-secondary: #595959;
+        --color-border: #e5e5e5;
+        --color-link: #0055cc;
+        --color-link-hover: #003380;
+        --color-focus: #0055cc;
+
+        --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        --font-serif: "Georgia", "Times New Roman", serif;
+        
+        --spacing-xs: 0.25rem;
+        --spacing-sm: 0.5rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 4rem;
+        --spacing-xxl: 6rem;
+
+        --layout-max-width: 840px;
+    }
+
+    /* 
+     * Reset & Base Styles 
+     */
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: var(--color-background);
+        color: var(--color-text-primary);
+        font-family: var(--font-sans);
+        font-size: 1.125rem; /* 18px base for readability */
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* 
+     * Typography 
+     */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-serif);
+        font-weight: 400;
+        line-height: 1.2;
+        margin-top: 0;
+        margin-bottom: var(--spacing-md);
+        color: var(--color-text-primary);
+    }
+
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.75rem; margin-bottom: var(--spacing-lg); }
+    h3 { font-size: 1.25rem; }
+
+    p {
+        margin-top: 0;
+        margin-bottom: var(--spacing-md);
+    }
+
+    a {
+        color: var(--color-link);
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+    }
+
+    a:hover {
+        color: var(--color-link-hover);
+        text-decoration-thickness: 2px;
+    }
+
+    a:focus-visible {
+        outline: 2px solid var(--color-focus);
+        outline-offset: 2px;
+        border-radius: 2px;
+    }
+
+    time, .meta {
+        font-size: 0.875rem;
+        color: var(--color-text-secondary);
+        font-family: var(--font-sans);
+    }
+
+    /* 
+     * Layout & Components 
+     */
+    .container {
+        max-width: var(--layout-max-width);
+        margin: 0 auto;
+        padding: 0 var(--spacing-md);
+    }
+
+    section {
+        margin-bottom: var(--spacing-xxl);
+    }
+
+    .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: var(--color-background);
+        padding: var(--spacing-sm);
+        z-index: 100;
+    }
+
+    .skip-link:focus {
+        top: 0;
+    }
+
+    /* Header */
+    .site-header {
+        padding: var(--spacing-lg) 0;
+        margin-bottom: var(--spacing-xl);
+        border-bottom: 1px solid var(--color-border);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: var(--spacing-md);
+    }
+
+    .site-title {
+        font-family: var(--font-sans);
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .site-title a {
+        color: var(--color-text-primary);
+        text-decoration: none;
+    }
+
+    .site-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: var(--spacing-lg);
+    }
+
+    .site-nav a {
+        color: var(--color-text-secondary);
+        text-decoration: none;
+        font-size: 0.95rem;
+    }
+
+    .site-nav a:hover {
+        color: var(--color-text-primary);
+    }
+
+    /* Hero / Introduction */
+    .site-intro {
+        border-bottom: 1px solid var(--color-border);
+        padding-bottom: var(--spacing-xl);
+    }
+
+    .site-intro h1 {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .site-intro .subtitle {
+        font-family: var(--font-serif);
+        font-size: 1.5rem;
+        color: var(--color-text-secondary);
+        margin-bottom: var(--spacing-lg);
+        line-height: 1.3;
+        max-width: 55ch;
+    }
+
+    .site-intro .intro-text {
+        font-size: 1.125rem;
+        max-width: 70ch;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .site-intro .intro-text:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Explore Topics (Cards) */
+    .topic-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--spacing-md);
+    }
+
+    .topic-card {
+        border: 1px solid var(--color-border);
+        padding: var(--spacing-lg);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .topic-card h3 {
+        margin-bottom: var(--spacing-xs);
+        font-family: var(--font-sans);
+        font-weight: 600;
+        font-size: 1.125rem;
+    }
+
+    .topic-card h3 a {
+        color: var(--color-text-primary);
+        text-decoration: none;
+    }
+
+    .topic-card h3 a:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+    }
+
+    .topic-card p {
+        margin: 0;
+        font-size: 0.95rem;
+        color: var(--color-text-secondary);
+    }
+
+    /* Article List (Featured Research) */
+    .article-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border-top: 1px solid var(--color-border);
+    }
+
+    .article-list li {
+        padding: var(--spacing-lg) 0;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .article-list article {
+        display: grid;
+        gap: var(--spacing-xs);
+    }
+
+    .article-list h3 {
+        margin: 0;
+    }
+
+    .article-list h3 a {
+        color: var(--color-text-primary);
+        text-decoration: none;
+    }
+
+    .article-list h3 a:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+    }
+
+    .article-list p {
+        margin: 0;
+        color: var(--color-text-secondary);
+        font-size: 1rem;
+        max-width: 70ch;
+    }
+
+    /* Knowledge Hubs & Principles */
+    .simple-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .simple-list.hubs li a {
+        font-family: var(--font-serif);
+        font-size: 1.25rem;
+        color: var(--color-link);
+        text-decoration: none;
+    }
+
+    .simple-list.hubs li a:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+    }
+
+    .simple-list.principles li {
+        font-size: 1.125rem;
+        color: var(--color-text-primary);
+        padding-left: var(--spacing-md);
+        position: relative;
+    }
+
+    .simple-list.principles li::before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: var(--color-text-secondary);
+    }
+
+    /* Footer */
+    .site-footer {
+        margin-top: var(--spacing-xxl);
+        padding: var(--spacing-lg) 0;
+        border-top: 1px solid var(--color-border);
+        color: var(--color-text-secondary);
+        font-size: 0.875rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        :root {
+            --spacing-xl: 2.5rem;
+            --spacing-xxl: 4rem;
+        }
+        
+        h1 { font-size: 2rem; }
+        .site-intro .subtitle { font-size: 1.25rem; }
+        
+        .site-header {
+            flex-direction: column;
+            padding: var(--spacing-md) 0;
+        }
+        
+        .site-nav ul {
+            gap: var(--spacing-md);
+        }
+    }
+</style>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div class="container">
+    <header class="site-header">
+        <div class="site-title"><a href="/">Profit & Privilege</a></div>
+        <nav class="site-nav" aria-label="Primary Navigation">
+            <ul>
+                <li><a href="/research">Research</a></li>
+                <li><a href="/topics">Topics</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        
+        <!-- Introduction -->
+        <section class="site-intro">
+            <h1>Profit & Privilege</h1>
+            <p class="subtitle">Helping people make better decisions by focusing on value instead of hype.</p>
+            <p class="intro-text">Too many decisions today are driven by marketing hype, shortcuts, and incomplete information. We often discover that the fastest, cheapest, or most popular choice ultimately becomes the most expensive one in the long run.</p>
+            <p class="intro-text">Profit & Privilege exists to solve this problem. We are an independent editorial platform built to help you make better long-term decisions by focusing on evidence, practical experience, and enduring value.</p>
+        </section>
+
+        <!-- Explore Topics -->
+        <section>
+            <h2>Explore Topics</h2>
+            <div class="topic-grid">
+                <div class="topic-card">
+                    <h3><a href="/topics/online-business">Online Business</a></h3>
+                    <p>Affiliate marketing, entrepreneurship and sustainable online income.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><a href="/topics/technology-ai">Technology & AI</a></h3>
+                    <p>AI tools, SEO, automation and practical workflows.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><a href="/topics/health-wellbeing">Health & Wellbeing</a></h3>
+                    <p>Nutrition, healthy living and informed choices.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><a href="/topics/personal-growth">Personal Growth</a></h3>
+                    <p>Habits, decision making and long-term thinking.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Research -->
+        <section>
+            <h2>Featured Research</h2>
+            <ul class="article-list">
+                <li>
+                    <article>
+                        <time class="meta" datetime="2024-05-10">May 10, 2024</time>
+                        <h3><a href="/research/article-placeholder-1">[Featured Research Title]</a></h3>
+                        <p>[Brief description of the research, focusing on methodology, findings, or practical application.]</p>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <time class="meta" datetime="2024-04-22">April 22, 2024</time>
+                        <h3><a href="/research/article-placeholder-2">[Featured Research Title]</a></h3>
+                        <p>[Brief description of the research, focusing on methodology, findings, or practical application.]</p>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <time class="meta" datetime="2024-03-15">March 15, 2024</time>
+                        <h3><a href="/research/article-placeholder-3">[Featured Research Title]</a></h3>
+                        <p>[Brief description of the research, focusing on methodology, findings, or practical application.]</p>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Knowledge Hubs -->
+        <section>
+            <h2>Knowledge Hubs</h2>
+            <ul class="simple-list hubs">
+                <li><a href="/hubs/olsp-academy">OLSP Academy</a></li>
+                <!-- Future hubs can be added here as simple list items -->
+            </ul>
+        </section>
+
+        <!-- Our Principles -->
+        <section>
+            <h2>Our Principles</h2>
+            <ul class="simple-list principles">
+                <li>Facts before opinions.</li>
+                <li>Value before price.</li>
+                <li>Long-term thinking over quick wins.</li>
+                <li>Research before recommendations.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div>&copy; 2024 Profit & Privilege. All rights reserved.</div>
+        <div>
+            <a href="/privacy">Privacy Policy</a>
+        </div>
+    </footer>
+</div>
