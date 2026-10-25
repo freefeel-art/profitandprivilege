@@ -132,3 +132,13 @@
 
 
     .author-illustration > img { display: block; width: 100%; max-width: 100%; height: auto; }
+
+    /* Philosophy extends the existing typography and palette. */
+    .site-header nav { justify-content: flex-end; }
+    .philosophy-hero { max-width: 55rem; padding-block: 4.5rem 3rem; }
+    .philosophy-hero h1 { font-size: clamp(2.5rem, 5.5vw, 5rem); line-height: 1.12; letter-spacing: -.045em; }
+    .philosophy-hero .section-intro { max-width: 38rem; font-size: 1rem; }
+    .principle-nav { padding-block: 1.5rem; border-block: 1px solid var(--line); }
+    .related-reading { margin-top: 2.5rem; border-top: 1px solid var(--line); }
+    @media (max-width: 1000px) { .site-header nav { justify-content: flex-start; } }
+    @media (max-width: 640px) { .philosophy-hero { padding-top: 3rem; } }
