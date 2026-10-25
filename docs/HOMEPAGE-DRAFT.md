@@ -1,4 +1,7 @@
-# Homepage draft — local only
+# Homepage draft — development preview only
+
+> Current status and remaining release requirements are in the follow-up section below.
+> Historical About Me notes describe the old combined draft, not the approved live page.
 
 ## Scope
 
@@ -155,3 +158,83 @@ workflows exist; Netlify still targets the separate validator app. Delivery uses
 same skip-build markers to existing development branch, with host status and
 production checksum verification. No main merge or deployment commands.
 Preview: http://127.0.0.1:8765/ (loopback only).
+
+## Homepage follow-up — 2026-10-25 (after About Me production release)
+
+### Current scope
+
+Continue the existing approved visual direction on `design/value-before-profit-home`,
+starting at `41b2edf`. No new design, framework, package, production deployment,
+main merge, configuration PR merge, or hosting-setting change.
+The existing Python standard-library static server is adequate; reuse its loopback
+preview at http://127.0.0.1:8765/ on the Lenovo. No public preview was created.
+
+### Implemented and checked
+
+- Preserve warm cream/gold/brown colors, taupe navigation, hero depth,
+  typography, four topics and all four approved core strings.
+- Load `assets/css/home.css` only on the homepage. It is an exact snapshot of the
+  existing stylesheet, isolating subsequent homepage work from About/Philosophy.
+  `assets/css/site.css` and both other HTML pages remain byte-for-byte untouched.
+- Both About links now open the approved https://profitandprivilege.com/about/,
+  not the obsolete local About draft. The published page is not modified.
+- Remove the redundant second research-placeholder paragraph; retain the honest
+  "In development" state and explicit statement that no articles are published.
+- Retain preview-only notices until a separate production release is approved.
+- Existing server responds HTTP 200 and serves the current working tree.
+
+### Ready versus unfinished
+
+| Area | Status |
+| --- | --- |
+| Identity, hero and four core sentences | Implemented; preserved exactly |
+| Navigation, mobile layout, keyboard skip link | Checked at six widths; minimum measured text contrast 4.79:1 |
+| Four exploration areas | Ready as non-clickable topic introductions; no article listings invented |
+| Research & Insights | Honest empty state implemented; real editorial material not supplied |
+| The Thoughtful Man text and published About links | Implemented and checked |
+| Original author photograph | Missing/unverified; current archive-graphic crop is not claimed authentic |
+| Our Philosophy links | Point to existing local draft; production `/philosophy/` is still 404 |
+| Production approval | Not granted; nothing from this follow-up is deployed |
+
+### Image provenance — still unresolved
+
+The homepage still references `docs/assets/authors/jarmo-halonen-author.png`,
+1122×1402, introduced by owner commit `ac440f0` on 2026-06-25. SHA256:
+`8a536b7e3cf45e55e4727b4864f030b49f59d3e8d75caa13a4ec3bb6cbbaf89e`.
+It is a composed profile graphic, displayed through the already-existing CSS crop.
+It is NOT the About AI/logo portrait (`d46db1d…`), and neither asset was modified.
+An original photographic source has not been verified. A filename, crop, Git commit
+or visual inspection does not prove authenticity.
+
+Search covered the complete current repository and all Git object paths, current
+inbound attachments, Downloads, Pictures and Documents. The history contains only
+the profile graphic and the separate AI/logo portrait. Earlier session history and
+notes also explicitly leave the original photograph unresolved. Do not misreport
+this requirement as complete or create a synthetic replacement.
+
+### Before production approval
+
+1. Locate and verify the original photograph, then replace only the homepage image
+   and review its crop/alt text. The owner has been asked for its path or existing URL.
+2. Resolve the unpublished Philosophy links: separately authorize that page's release,
+   or omit its homepage links from the isolated homepage release. Do not silently
+   deploy it with the whole development branch.
+3. Approve the final homepage preview and whether the research empty state is
+   acceptable at launch. Real articles are not required for the layout check.
+4. Release only the approved homepage files over current main, preserving the
+   already-published About HTML, isolated About CSS, image and all other production
+   blobs. Remove preview notices only in that separately authorized release.
+
+### Verification evidence
+
+Focused Chromium/Playwright checks: exact approved strings, one h1/four topics,
+image load/source/hash preservation, local links/fragments, keyboard Tab/Enter,
+reduced motion, widths 320/375/390/768/1024/1440 without horizontal overflow,
+actual rendered text contrast (minimum 4.79:1), no page errors/failed resource
+responses/external render requests. Desktop/mobile screenshots visually inspected.
+Report: `qa/homepage-followup-2026-10-25.json`.
+
+Local protected files unchanged: `about/index.html`, `philosophy/index.html`,
+`assets/css/site.css` and both original image assets. Production home and About
+bytes are compared against `origin/main` before/after the development push.
+No Safari/Firefox/screen-reader certification is claimed.

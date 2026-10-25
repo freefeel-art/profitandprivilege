@@ -1,0 +1,30 @@
+{
+  "approvedCopy": true,
+  "topics": 4,
+  "widths": [
+    320,
+    375,
+    390,
+    768,
+    1024,
+    1440
+  ],
+  "horizontalOverflow": false,
+  "imageSource": "docs/assets/authors/jarmo-halonen-author.png",
+  "imageAuthenticity": "original photograph not verified; existing source graphic unchanged",
+  "aboutLinks": "https://profitandprivilege.com/about/",
+  "stylesheetIsolated": true,
+  "internalLinks": true,
+  "keyboard": true,
+  "reducedMotion": true,
+  "minimumTextContrast": 4.79,
+  "protectedFilesUnchanged": [
+    "about/index.html",
+    "assets/css/site.css",
+    "philosophy/index.html",
+    "assets/images/profit-and-privilege-author-portrait.png",
+    "docs/assets/authors/jarmo-halonen-author.png"
+  ],
+  "errors": [],
+  "externalRequests": []
+}
