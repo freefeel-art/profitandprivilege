@@ -238,3 +238,33 @@ Local protected files unchanged: `about/index.html`, `philosophy/index.html`,
 `assets/css/site.css` and both original image assets. Production home and About
 bytes are compared against `origin/main` before/after the development push.
 No Safari/Firefox/screen-reader certification is claimed.
+
+## Ideas in Practice — 2026-10-25
+
+Owner-authorized development-only addition after Explore What Matters and before
+Research & Insights. Four cards in the requested order: BestBuyBounty, OLSP,
+MLMTraining, Chatbot Guides. BestBuyBounty is described as an independent NeoLife
+site sharing P&P values, not a subdomain. MLMTraining provides independent training
+reviews, not recruitment. Chatbot Guides is forthcoming, marked In Development
+without a public link; FastBots.ai is its first affiliate partnership, not its brand.
+
+Reuses the existing topic cards, heading, links, palette and fonts with a two-column
+desktop / one-column mobile grid. Only homepage HTML and isolated home.css change;
+existing navigation, hero, four Explore topics and identity copy are preserved.
+Research and Thoughtful Man section numbers advance to 03 and 04. No packages,
+frameworks, shared styles, About/Philosophy pages, other projects, subdomain content
+or deployment settings change. The existing standard-library static preview and
+Playwright checks are adequate; no new platform or design system is needed.
+
+Checks: balanced HTML tags, unique IDs/attributes, local links/fragments, four-card
+order, three exact outbound URLs (each HTTP 200), no Chatbot Guides link, keyboard
+navigation, reduced motion, unchanged protected files and approved copy. At
+320/375/390/768/1024/1440 px there is no horizontal overflow, and the header, hero
+and Explore HTML/bounding boxes exactly match the pre-change baseline. Minimum
+measured text contrast is 4.79:1; no browser errors or external rendering requests.
+Desktop (1440) and mobile (390) screenshots visually reviewed.
+
+Evidence: `qa/ideas-in-practice-2026-10-25.json`; temporary browser script
+`/tmp/pp-ideas-check.cjs`, screenshots `/tmp/pp-ideas-{1440,390}.png`.
+Preview: http://127.0.0.1:8765/#practice (Lenovo loopback only).
+Ready for owner visual review, not production publication. Main is not merged.
