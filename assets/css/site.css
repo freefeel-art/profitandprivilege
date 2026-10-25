@@ -4,6 +4,7 @@
       /* Existing palette approved for experimentation by the owner on 2026-10-25. */
       --paper: #FBF8F0;
       --paper-deep: #F0EBDD;
+      --navigation: #E5DED0;
       --surface: #FFFFFF;
       --gold: #C8962E;
       --gold-light: #E8C870;
@@ -28,7 +29,8 @@
     .draft-note span { padding-inline: .5rem; }
     .skip-link { position: absolute; z-index: 5; top: .5rem; left: 1rem; transform: translateY(-200%); background: var(--surface); padding: .6rem 1rem; }
     .skip-link:focus { transform: none; }
-    .site-header { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: 1.65rem; border-bottom: 1px solid var(--line); }
+    /* Full-width taupe band, with content aligned to the existing shell. */
+    .site-header { background: var(--navigation); box-shadow: 0 0 0 100vmax var(--navigation); clip-path: inset(0 -100vmax); display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: 1.65rem; border-bottom: 1px solid var(--line); }
     .brand { font-family: var(--font-display); font-size: 1.5rem; line-height: 1.3; color: var(--ink); text-decoration: none; white-space: nowrap; }
     .brand span { color: var(--brown); font-style: italic; }
     nav { display: flex; flex-wrap: wrap; column-gap: 1.8rem; row-gap: .3rem; }
@@ -39,7 +41,7 @@
     h1 span { display: block; color: var(--brown); font-style: italic; }
     .text-link { display: inline-flex; align-items: center; gap: 1.5rem; min-height: 44px; font-size: .82rem; font-weight: 600; text-decoration: none; }
     .text-link span { font-size: 1.3rem; }
-    .intro-copy { padding-top: 1.9rem; color: var(--muted); }
+    .intro-copy { align-self: center; padding: 2.25rem 2rem; border-left: 2px solid var(--gold); background: var(--surface); box-shadow: 0 12px 32px -24px rgba(26, 26, 26, .25); color: var(--muted); }
     .manifesto { margin-bottom: 1.8rem; color: var(--ink); font-family: var(--font-display); font-size: clamp(1.8rem, 2.5vw, 2.5rem); letter-spacing: -.025em; line-height: 1.3; text-wrap: balance; }
     .intro-copy p + p { margin-top: 1.2rem; }
     .section { padding-block: 5rem; }
@@ -87,7 +89,7 @@
       .intro, .research-grid, .thoughtful { grid-template-columns: minmax(0, 1fr); }
       .intro { padding-block: 3.5rem; gap: 2.5rem; }
       h1 { font-size: clamp(3.3rem, 13vw, 5rem); }
-      .intro-copy { padding-top: 0; }
+      .intro-copy { padding: 1.5rem 1.25rem; }
       .manifesto { font-size: 1.9rem; }
       .section { padding-block: 3.5rem; }
       .section-heading { align-items: start; flex-direction: column; gap: 1.2rem; }
@@ -103,7 +105,9 @@
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
     @media (forced-colors: active) { .topic, .thoughtful-copy { border-color: CanvasText; } }
 
-    nav a[aria-current="page"] { color: var(--brown); text-decoration: underline; }
+    nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; }
+    .site-header .brand span { color: var(--ink); }
+    .site-header a:focus-visible { outline-color: var(--ink); }
     figure { margin: 0; }
     .author-figure { margin-top: 2rem; width: min(100%, 20rem); }
     /* View only the portrait area of the original author-profile graphic.

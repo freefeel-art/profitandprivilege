@@ -130,3 +130,28 @@ byte-for-byte into `assets/images/` and labeled as AI-generated. The homepage
 still shows the existing profile-graphic portrait crop: a separate authentic
 original photograph has not yet been located or verified. Its filename/location
 has been requested from the owner. See `ABOUT-ME-DRAFT.md` for hashes and scope.
+
+## Visual refinement — 2026-10-25
+
+Owner-approved navigation background #E5DED0 now spans the viewport on all three
+pages, retaining shell alignment and responsive navigation. Header text/current
+page/focus use existing ink/muted tokens for contrast. Gold content accents remain.
+Existing homepage introductory copy has a white surface, restrained gold edge,
+soft shadow and vertically centered desktop position. Mobile padding is reduced.
+No HTML, text, images, typography or topic changes; no added decorative content.
+
+All three pages passed Chromium/Playwright checks at 320, 375, 390, 768, 1024 and
+1440 px: no overflow, local links/fragments, approved copy, images, navigation,
+keyboard skip links/focus. Minimum text contrast 4.79:1; no browser errors/external
+requests. Desktop/mobile screenshots visually inspected for all three pages.
+Results: /tmp/pp-visual-after-results.json. Screenshots:
+/tmp/profitandprivilege-{home,about,philosophy}-{desktop,mobile}.png.
+Static HTML requires no build; unrelated app untouched. Not a multi-browser or
+screen-reader certification.
+
+GitHub CLI is now authenticated; existing remote development branch matches
+starting commit bfdffbd. Its Cloudflare Workers check is skipped. No GitHub
+workflows exist; Netlify still targets the separate validator app. Delivery uses
+same skip-build markers to existing development branch, with host status and
+production checksum verification. No main merge or deployment commands.
+Preview: http://127.0.0.1:8765/ (loopback only).
