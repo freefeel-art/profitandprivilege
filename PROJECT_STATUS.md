@@ -107,3 +107,14 @@ A visitor leaves the site with a clear answer to:
 "What business opportunity should I investigate next?"
 
 The project should prioritize decision support over raw scoring.
+
+## 25October2026 — isolated author/brand documentation delivery
+
+Existing human founder/author identity remains Jarmo Halonen. Shared policy:
+docs/identity-standard.md; approved-source portrait assets under docs/assets/authors/
+pp-20261025 and prepared LinkedIn company cover under docs/assets/branding/.
+Target company identity Profit & Privilege retains the old LinkedIn Page/URL.
+Actual public name is still Profit & Privilege: OLSP until authenticated save and
+readback. No personal profile changed; no website deployment. Main Personal V1
+remains local/unreleased; existing legacy public homepage is not the new release.
+Only these identity docs/assets are isolated here, not pre-existing unfinished work.

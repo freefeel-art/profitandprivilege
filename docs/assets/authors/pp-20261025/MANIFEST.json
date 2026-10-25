@@ -1,0 +1,23 @@
+{
+  "source_name": "profit-and-privilege-author-portrait.png",
+  "source_unchanged": true,
+  "exports": "deterministic resize only; no new face; original square composition",
+  "files": {
+    "author-portrait-source.png": {
+      "sha256": "d46db1dbcdaa1de2f73ddc4231760c709ea526962e3db4f8dc564c4a1f5a0f25",
+      "bytes": 2204841
+    },
+    "linkedin-personal-400-prepared.png": {
+      "sha256": "edb1ec5145faf281671ac0b728b0774d4ccc495653ede176a7d0121a995ccd5b",
+      "bytes": 228835
+    },
+    "author-160.png": {
+      "sha256": "f33e28f0eb0e5dbeaed159ebf6fcbf25b1b52c47f3324c5b74af64a96d536871",
+      "bytes": 42647
+    },
+    "author-800.png": {
+      "sha256": "4a590aaa1974f1aea9aa2435cf4cd952816a022f5759aee14405a2d9d90c068f",
+      "bytes": 860208
+    }
+  }
+}
