@@ -4,169 +4,305 @@
 
 I'm Jarmo Halonen. I was born in Finland and have lived in Sweden since 2002.
 
-I'm not a guru, a motivational speaker, or someone who has all the answers. I'm a man who has lived, worked, made mistakes, changed direction, and learned that some of life's most valuable lessons don't come from books.
+I'm not a guru, a motivational speaker, or someone who has all the answers. I'm an ordinary man who has worked, made mistakes, taken a few wrong turns, started over, and learned a thing or two along the way.
 
-They come from experience — and from asking better questions.
+Some lessons were rewarding. Others were expensive. A few changed my life.
 
-I'm a former tanker truck driver who transported industrial chemicals, an entrepreneur, and a network marketing enthusiast since 1996. Each experience has taught me something about people, work, opportunities, and the difference between what we're promised and what we actually receive.
+And some of the things I remember most clearly are surprisingly small moments from more than forty years ago.
 
-Some lessons were rewarding. Others were expensive. And some changed my life.
+## When Time Began to Fly
 
-## The Value of Experience
+I think my first summer job was around 1980, at Kotivara Oy in Oulu, Finland. I returned there for several summers.
 
-I've made mistakes. Plenty of them. Some cost me time and money. Others had much more personal consequences.
+There is one conversation I remember as if it happened yesterday.
 
-For many years, alcohol influenced my decisions, relationships, and direction in life. I could spend the rest of my days thinking about the years I lost, regretting decisions I made, or wishing things had been different.
+One of the older men at work — although he wasn't even fifty at the time — said to me:
 
-But that wouldn't change what happened.
+**"Just wait, son. Once you've completed your military service, time will start flying."**
+
+At the time, I probably smiled and carried on working. What could a young man possibly know about time flying?
+
+Well, now I know.
+
+I completed my military service in Kajaani in 1985–1986 and returned to Kotivara afterward.
+
+In 1987, I took a short detour through Järvenpää before returning to Oulu. This time, instead of going back to my old workplace, I joined Nokia Information Systems.
+
+It was a fascinating period. Mobile phones were still in their infancy. Computers such as the Finnish MicroMikko represented a new technological world. The internet wasn't even something most of us dreamed about.
+
+Looking at the world today, with artificial intelligence and technology changing almost everything around us, I sometimes think about those early days.
+
+Who could have imagined where it would all lead?
+
+## A Life on the Road
+
+By late 1987, I was in Rovaniemi taking a truck-driving course.
+
+My first job afterward was with P. Isopahkala in Kalajoki. In 1988, I began transporting industrial chemicals.
+
+Following a company acquisition, my employment continued with Haanpää in Oulu.
+
+I remained in that line of work until 1998.
+
+Those years taught me about responsibility, practical problem-solving, and the realities of working life. But there was another side to the story.
+
+Alcohol had become a problem.
+
+I didn't drink away my driving licence. But eventually, I simply didn't have the strength to continue as before.
+
+My career with Haanpää ended in 1998.
+
+I could spend years wondering what might have happened if I'd made different decisions. But that wouldn't change what happened.
 
 **What's done is done. What matters is what I choose to do with it.**
 
-I'm not necessarily proud of every decision I've made. But I acknowledge those decisions, accept their consequences, and recognize what they taught me.
+## A Holiday I Still Remember
 
-That doesn't make the mistakes right. It doesn't mean I would recommend making them. It simply means I refuse to let them become nothing more than regrets.
+In 1998, while on holiday from my job at Haanpää, I spent time in Sweden.
+
+I was working on a major cleaning assignment at SJ's Hagalund railway maintenance facility.
+
+By then, I had been involved with NeoLife and network marketing since 1996. I was curious about its products, particularly a cleaning product called Super 10.
+
+I decided to put it to work.
+
+One day, when the workers returned from their lunch break, something rather amusing happened.
+
+One after another, the men began sniffing the air.
+
+They wanted to know what that pleasant scent was.
+
+Notice that I said *scent*, not *smell*.
+
+It was the Super 10 I had been using.
+
+I still smile when I think about it.
+
+Another worker came over and asked what product I was using. When I showed him, he recognized it immediately.
+
+He had once had the same product at home.
+
+But nobody had explained its properties to him or shown him how it could be used for more demanding cleaning tasks.
+
+That conversation stayed with me.
+
+Here was someone who had already owned the product but hadn't known what he could do with it.
+
+Sometimes people don't need another product. They need to understand the one they already have.
+
+That is something I have remembered ever since.
+
+## Trying My Own Way
+
+After my driving career ended, I tried entrepreneurship.
+
+I started a heavy-vehicle washing business.
+
+Naturally, being the curious person I am, I also tried Super 10 in my own business. This gave me another opportunity to evaluate a product through practical experience rather than simply accepting what someone said about it.
+
+I became convinced of its usefulness in my work.
+
+Did that make selling it easy?
+
+Of course not.
+
+People have their own habits, opinions, and suspicions. Just because I had experienced something myself didn't mean everyone else would believe me.
+
+And to be fair, why should they accept my word without asking questions?
+
+The business eventually ended in bankruptcy.
+
+Another expensive lesson.
+
+In 2002, I moved to Sweden.
+
+There I worked in different jobs, from cleaning to renovation and restoration work. Life continued, sometimes in directions I hadn't expected.
+
+There were good experiences, difficult experiences, and plenty of opportunities to learn.
+
+But I still had some important lessons ahead of me.
 
 ## When Life Became the Teacher
 
-In 2020, I entered addiction treatment at Hatten in Sweden.
+For many years, alcohol influenced my decisions, relationships, and direction in life.
+
+I'm not particularly proud of everything I did during those years. But I won't pretend they didn't happen.
+
+In 2020, I entered addiction treatment at [Hatten](https://hatten.se/) in Sweden.
 
 One of the first things I was told was that I needed to learn to manage my emotions.
 
 For the first month, that sounded almost impossible.
 
-Then, one night at 2:30 AM, I woke up with a realization.
+Then something happened.
 
-Many of the principles I was learning — understanding my *why*, following a system, accepting guidance, taking responsibility, and learning to trust myself — were surprisingly familiar.
+One night, around 2:30 in the morning, I woke up with a realization.
 
-I had encountered them through NeoLife and network marketing years earlier.
+Many of the principles I was learning in treatment were surprisingly familiar.
 
-The knowledge had been there. But knowing something and living by it are two very different things.
+Understanding my *why*. Following a system. Accepting guidance. Taking responsibility. Learning to trust myself.
+
+Where had I heard those things before?
+
+Through NeoLife and network marketing, years earlier.
+
+The knowledge had been there all along.
+
+But knowing something and actually living by it are two very different things.
 
 That night, the pieces began falling into place.
 
-I'm a recovering alcoholic, living sober one day at a time.
+**I'm a recovering alcoholic, living sober one day at a time.**
 
-That decision to change direction didn't erase my past. It changed my relationship with it.
+Recovery didn't erase my past. It changed the way I looked at it.
 
-I began to understand that taking responsibility for my life also meant questioning my own assumptions, emotions, habits, and decisions.
+I began to understand that taking responsibility for my life also meant examining my own assumptions, emotions, habits, and decisions.
 
-It's easy to question what other people say. Questioning yourself is often much harder.
+It's easy to question other people.
 
-## Question What You Hear — Including What You Believe
+Questioning yourself can be much harder.
+
+## Learning to Ask Better Questions
+
+There is another small experience I remember.
 
 People once told me not to attend Alcoholics Anonymous meetings.
 
-Eventually, I asked them a simple question:
+Eventually, I asked a simple question:
 
-"Have you ever been to one?"
+**"Have you ever been to one?"**
 
-They hadn't. They were repeating something someone else had said.
+It's a question that applies to much more than recovery.
 
-We all duplicate information. We recommend products, share opinions, repeat stories, and pass along advice.
+How often do we accept someone's opinion without knowing whether it comes from personal experience, reliable information, or something they heard from somebody else?
 
-Sometimes we spread useful knowledge. Sometimes we spread fear, assumptions, or misinformation. And often, we don't even notice the difference.
+I've done that myself.
 
-**Before accepting a claim, ask where it comes from. Before rejecting an opportunity, find out what it actually offers.**
+We all have assumptions. We all make judgments. And sometimes we're wrong.
 
-Question everything — including your own assumptions.
+Over the years, I've listened to people from very different backgrounds, including Steve Jobs, Warren Buffett, Richard Branson, Jerry Brassfield, Eric Worre, and Bruce Castro.
 
-## Curiosity Has Always Been Part of Me
+That doesn't mean I agree with everything they say.
 
-I've always been curious. And, I admit, rather stubborn.
+I listen because other people's experiences can teach us something.
 
-When something interests me, I want to understand how it works. I don't always accept the first explanation, and I don't particularly enjoy being told that something cannot be done without understanding why.
+But ultimately, I still have to think for myself.
 
-That curiosity has taken me into business opportunities, technology, online marketing, and many experiments that didn't always work out as expected.
+## Curiosity Never Retired
 
-I've followed the development of artificial intelligence since it became widely accessible.
+I've always been curious.
 
-What started as curiosity gradually became hands-on experimentation: building websites, exploring automation, working with AI agents, testing ideas, and trying to understand what these technologies can actually accomplish.
+And, I admit, rather stubborn.
 
-Not everything worked. Sometimes the tools failed. Sometimes my assumptions were wrong. Sometimes I spent far too much time pursuing an approach that turned out to be a dead end.
+When something interests me, I want to understand how it works. I don't particularly enjoy being told that something cannot be done without understanding why.
 
-But I learned something from those experiences.
+That curiosity has taken me through network marketing, entrepreneurship, online business, technology, and plenty of experiments that didn't work out as expected.
+
+And then came artificial intelligence.
+
+I remember the days of the MicroMikko. Now I'm experimenting with AI agents, automation, websites, and tools that would have seemed like science fiction back in 1987.
+
+Sometimes they work remarkably well.
+
+Sometimes they don't work at all.
+
+Sometimes I discover that the problem wasn't the technology but my own assumptions.
+
+I have spent more hours than I care to admit trying to make something work before realizing I needed a different approach.
+
+But there is a question I keep coming back to:
 
 **If I hadn't tried, how would I know?**
 
-I don't believe every mistake is necessary or that persistence always makes an idea worthwhile. Sometimes the most important lesson is knowing when to change direction.
+That doesn't mean every idea deserves endless effort. Sometimes knowing when to stop is just as important as knowing when to begin.
 
-But I would rather learn through honest exploration than spend my life accepting someone else's conclusions without asking questions.
+I'm still learning that too.
 
-## Looking Beyond the Promise
+## Value Is Not the Same as Price
 
-My experiences in entrepreneurship and network marketing have taught me to look beyond appearances.
+My experiences with NeoLife, my own washing business, and many other products and opportunities have taught me something important.
 
-A product can be expensive to purchase but economical to use. A cheap product can turn out to be costly. An expensive product isn't automatically better. A popular opportunity isn't necessarily a good opportunity. And an unfamiliar idea isn't necessarily a bad one.
+A product can seem expensive when you look only at the purchase price, yet turn out to be economical in actual use.
 
-Price is what we pay. Value is what we actually receive.
+A cheap product can sometimes become the more expensive choice.
 
-What matters is understanding what something actually offers, what it costs, what evidence supports its claims, and whether it makes sense for the person considering it.
+And an impressive marketing promise doesn't automatically mean something delivers real value.
 
-That applies to products, services, business opportunities, technology, and everyday decisions — including the way we spend our time.
+My Super 10 experiences were small examples of this.
 
-People don't necessarily need someone to sell them something. They need enough reliable information to recognize whether something offers genuine value.
+I had used the product myself. I had seen how it performed in particular situations. But I also learned that personal experience doesn't automatically convince someone else — and it shouldn't have to.
 
-That's why I believe in investigating, comparing, and explaining rather than pressuring people to buy.
+What works for me may not work for everyone.
+
+The important thing is to explain what you know, be clear about what you don't know, and give people enough information to decide for themselves.
 
 **Use what you believe in. Understand its value. Share your experience. Let others decide.**
 
-I've also learned that personal experience alone isn't enough. What worked for me might not work for someone else. What I believe to be true today may change when better information becomes available.
+That idea has stayed with me through the years.
 
-That's why I value research, comparison, practical experience, and the willingness to admit when I'm wrong.
+## Why I Created Profit & Privilege
 
-**Being willing to change your mind isn't weakness. It's part of learning.**
+Profit & Privilege grew out of all these experiences.
 
-## Learning to Think Independently
+Not because I found a secret formula for success.
 
-Over the years, I've learned from people with very different backgrounds, including Steve Jobs, Warren Buffett, Richard Branson, Jerry Brassfield, Eric Worre, and Bruce Castro.
+Quite the opposite.
 
-I don't follow them because I believe everything they say. I listen because experience can teach us something — even when we don't agree with every conclusion.
+I've seen enough mistakes, exaggerated promises, disappointments, and unexpected discoveries to know that life is rarely as simple as a sales presentation makes it sound.
 
-The important thing isn't whose opinion is the loudest. It's whether the idea makes sense when we examine it ourselves.
+I wanted to build a place where I could explore ideas, products, services, opportunities, technology, and personal development with an open mind.
 
-And that becomes much easier when we learn to recognize our emotions rather than allowing fear, excitement, or other people's expectations to make our decisions for us.
+A place where curiosity is welcome, questions are encouraged, and changing your mind isn't something to be ashamed of.
 
-## Why Profit & Privilege Exists
+I'm interested in real value.
 
-Profit & Privilege grew from these experiences and questions. Not because I discovered a secret formula for success, or believe everyone should follow the same path.
+Sometimes that value comes from a useful product. Sometimes from a business opportunity worth examining. Sometimes from technology that saves time.
 
-I wanted to create a place where ideas, products, services, and opportunities could be explored with curiosity, practical thinking, and respect for the reader's ability to decide.
+And sometimes it comes from a conversation with an older colleague who says something you won't fully understand until forty years later.
 
-A place where value matters more than marketing promises. Where a recommendation should have a reason behind it. Where uncertainty can be acknowledged rather than hidden.
+I have nothing against earning money. Commercial opportunities and genuine value can exist together.
 
-And where earning money isn't something to be ashamed of, but shouldn't come before delivering genuine value.
+But I believe the order matters.
 
-That's what **Value Before Profit** means to me. Genuine value and commercial opportunity can exist together. But the order matters.
+**Value Before Profit.**
 
-It doesn't mean everything must be free, or that commercial relationships are inherently wrong. It means the value should be real, the information should be clear, and the reader should have the freedom to make an informed decision.
+That's the thinking behind Profit & Privilege.
 
-Here, I explore entrepreneurship, network marketing, affiliate marketing, technology, personal development, and other subjects that may help us make better decisions.
+The fuller principles belong on the *Our Philosophy* page. This is simply the story of some of the experiences that brought me here.
 
-Some discoveries may lead to recommendations. Others may lead to criticism or a change of opinion. Both are valuable when supported by evidence and experience.
+## The Thoughtful Man
 
-**Question Everything. Value What Matters.**
+In Swedish, I sometimes describe myself as *Den fundersamma mannen* — the thoughtful man.
 
-Profit & Privilege is still growing. So am I. I expect to keep discovering things I didn't know, testing ideas, making occasional mistakes, and changing my understanding when the evidence gives me a reason to.
+It's not a title I've earned. It's simply a way of describing someone who keeps thinking, questioning, remembering, and occasionally wondering what on earth he's doing.
 
-That's not a weakness in the project. It's part of its purpose.
+I'm still that curious young man from Oulu in some ways.
 
-## Dare to Be Yourself
+Just a little older.
 
-In Swedish, I sometimes describe myself as *Den fundersamma mannen* — the thoughtful man. It's not a title I've earned. It's a way of approaching life.
+And now I understand what that man at Kotivara meant when he told me time would start flying after military service.
 
-I've learned that real value begins with life itself. When we learn to understand our emotions, accept responsibility for our choices, and find the courage to be ourselves, we discover a different kind of freedom.
+He was right.
 
-You don't have to become the person other people expect you to be. You can listen to advice, learn from others, respect their experiences, and still make your own decisions.
+The years have flown.
 
-You can admit you were wrong without allowing your mistakes to define you. You can change direction without denying where you've been. And you can remain curious without pretending to know everything.
+There have been mistakes, missed opportunities, difficult times, good people, surprising encounters, and more lessons than I could ever fit onto one page.
 
-I don't want you to replace someone else's opinions with mine. I want you to ask questions, examine the evidence, explore possibilities, and decide what genuinely matters to you.
+I can't change the road I've travelled.
 
-**We investigate. You compare. We explain. You decide.**
+But I can share some of what I've learned along the way.
 
-Because ultimately, it's your life.
+Perhaps someone will find something useful in it.
+
+Perhaps someone will disagree.
+
+That's perfectly fine.
+
+I don't want anyone to follow my path simply because it's mine.
+
+I'd rather encourage people to find their own.
 
 **Dare to be yourself. Who are you following?**
 
-— Jarmo Halonen
+— **Jarmo Halonen**\
 Founder, Profit & Privilege

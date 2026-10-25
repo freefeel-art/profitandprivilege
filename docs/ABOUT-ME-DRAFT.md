@@ -1,4 +1,39 @@
-# About Me — merged story, development branch
+# About Me — approved life story, development branch
+
+## Latest revision — 2026-10-25 13:24 owner request
+
+This section supersedes the historical content and delivery notes below.
+The latest supplied complete English story is the authority. All 152 story
+paragraphs/headings (10 sections) are rendered in order from docs/about-me.md.
+Light polish makes the 1998 Haanpää holiday relationship explicit as instructed;
+no other narrative wording was changed. Markdown signature uses an explicit
+line break rather than trailing spaces. Kotivara, Kajaani, Nokia, transport,
+Hagalund, the washing business/bankruptcy, Sweden and Hatten remain intact.
+Super 10 descriptions remain personal observations, not universal claims.
+
+Original attachment SHA-256: 792e69fb050c6a0748ab041fdb8e9a60a579f234e417426f770ca060a4ff66ff
+
+Validation: full ordered rendered/source equality; all three pages at
+320/375/390/768/1024/1440 px; local links/fragments, images, keyboard skip/focus,
+navigation round trips and text contrast >=4.5:1 pass. No browser errors or
+external resource requests. AI image and disclosure unchanged. Homepage,
+stylesheet and Philosophy remain byte-for-byte unchanged. Static HTML has no
+build step; netlify.toml builds the separate Opportunity Validator Astro app,
+which is untouched. Results: /tmp/pp-final-about-results.json.
+
+Publication is conditionally authorized only for a safely isolated About update.
+Live homepage matches origin/main:index.html (8c9042a); live /about/ is HTTP 404.
+The main commit has a successful Cloudflare Workers check for profitandprivilege.
+However no checked-in Worker deployment configuration or Actions workflow
+defines its current build/assets settings. Netlify config targets the separate
+app, not this static site. Existing user browser attachment fails (missing
+DevToolsActivePort); current Cloudflare settings cannot be inspected.
+Therefore production publication is blocked pending verified Cloudflare build/
+asset routing and a safe isolated About release. No entire development merge,
+hosting changes or production deployment was attempted. Development push uses
+[skip ci] [skip netlify]; GitHub authentication is now available.
+
+## Historical revision (superseded where noted)
 
 ## Current content and authority
 
