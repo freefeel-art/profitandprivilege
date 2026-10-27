@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/pp-visual-v1/font-312f8ebaede0db3b.woff2) format('truetype');
+}
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/assets/pp-visual-v1/font-315cfca1a67430ba.woff2) format('truetype');
+}
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/assets/pp-visual-v1/font-786f58b1976ab811.woff2) format('truetype');
+}
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/assets/pp-visual-v1/font-0513554cac9d5c8c.woff2) format('truetype');
+}
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/assets/pp-visual-v1/font-7a9b671b0fd0fd36.woff2) format('truetype');
+}
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/pp-visual-v1/font-a7a0a9114e29fbf6.woff2) format('truetype');
+}
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/assets/pp-visual-v1/font-0ebe594e405b7849.woff2) format('truetype');
+}
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/pp-visual-v1/font-b8f5e0a8bdd6a12c.woff2) format('truetype');
+}
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/assets/pp-visual-v1/font-68c4493c7c6c9aaf.woff2) format('truetype');
+}
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/pp-visual-v1/font-829aad32ab952535.woff2) format('truetype');
+}
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/assets/pp-visual-v1/font-5be2b984cdb8befc.woff2) format('truetype');
+}

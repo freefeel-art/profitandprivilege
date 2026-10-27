@@ -1,0 +1,33 @@
+/* Owner-approved P&P shared visual bundle. */
+:root{--paper:var(--cream);--paper-deep:var(--surface-2);--navigation:var(--band);--brown:var(--gold-deep);--muted:var(--ink-2);--font-body:var(--f-body);--font-display:var(--f-display)}
+body{font-family:var(--f-body);font-size:17px;line-height:1.7;overflow-wrap:break-word}
+
+
+.site-header .brand-name,.site-footer .brand-name{font-family:var(--f-display);font-weight:400}
+.site-header .brand-tag,.site-footer .brand-tag{font-family:var(--f-body);font-size:.65rem;letter-spacing:.14em;text-transform:uppercase}
+.site-header .bar{max-width:1280px;margin-inline:auto;min-height:68px;gap:1.5rem}
+.site-header .brand{flex-shrink:0}.site-header .site-nav{gap:1.65rem}
+.site-header .site-nav a{font-size:.88rem}
+.site-footer-inner{max-width:1280px;margin-inline:auto}
+.pp-home main{display:block;max-width:none;margin:0;padding:0}
+.pp-home main .shell{width:min(calc(100% - 3rem),1232px)}
+.pp-home main h2{border:0;padding-bottom:0}.pp-home main h1{font-size:clamp(3.4rem,7vw,6.5rem);line-height:1.04;letter-spacing:-.045em;text-wrap:initial;max-width:10ch}
+.pp-home main .intro{padding-block:clamp(3.5rem,6.5vw,6rem)}
+.pp-home main .intro-copy{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:8px;box-shadow:none}
+.pp-home main .manifesto{font-family:var(--f-display);font-size:clamp(1.8rem,2.5vw,2.5rem);line-height:1.2}
+.pp-home main .section{padding-block:4.5rem}
+.pp-home main .topic{background:var(--surface);border:1px solid var(--line);border-top:2px solid var(--gold);padding:1.4rem;border-radius:8px}
+.pp-home main .topic p{font-size:.94rem;line-height:1.7}
+.pp-home main .topic h3{font-size:1.45rem}
+.pp-home main .research-note{border-radius:8px;background:var(--surface);box-shadow:none}
+.pp-home main .thoughtful-copy{border-color:var(--gold)}
+.pp-home main .author-illustration img{border-radius:8px}
+.pp-home main .text-link{font-family:var(--f-body);font-size:.94rem;min-height:44px;color:var(--gold-deep)}
+.pp-home .site-footer{margin-top:0}
+/* Existing article structure/AssessmentPanel/quotes remain unchanged. */
+.data-gap-article .table-scroll{overflow-x:auto}.data-gap-article .table-scroll table{min-width:36rem}.data-gap-article #dgm-t{min-width:42rem}
+.data-gap-article #dgm-t td:nth-child(2),.data-gap-article #dgm-t td:nth-child(3){white-space:nowrap}
+@media(max-width:1050px){.site-header .site-nav{gap:1rem}.site-header .site-nav a{font-size:.82rem}}
+@media(max-width:860px){.site-header .bar{position:relative;min-height:80px;flex-wrap:wrap;padding-block:.75rem;gap:.7rem}.site-header .brand{min-width:0;max-width:calc(100% - 84px)}.site-header .brand>span:last-child{min-width:0}.site-header .brand-name{font-size:1.15rem}.site-header .brand-tag{font-size:.55rem;letter-spacing:.12em}.site-header .brand-mark{width:36px;height:36px;min-width:36px;padding:0}.site-header .nav-toggle{margin-left:auto}.site-header .site-nav{flex-basis:100%;width:100%;gap:.25rem}.site-header .site-nav.open{display:flex}.site-header .site-nav a{font-size:.94rem;padding:.6rem .8rem}.pp-home main .shell{width:calc(100% - 2.5rem)}}
+@media(max-width:640px){.pp-home main .intro{padding-block:3rem;gap:2rem}.pp-home main h1{font-size:clamp(3.2rem,13.5vw,4.5rem)}.pp-home main .section{padding-block:3rem}.pp-home main .topic{padding:1.1rem}.pp-home main .topic-grid{gap:1rem}.pp-home main .topic h3{font-size:1.3rem}.pp-home main .intro-copy{padding:1.5rem}.pp-home main .thoughtful{padding-block:3rem}.pp-home main .thoughtful-copy{padding-left:1.5rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
