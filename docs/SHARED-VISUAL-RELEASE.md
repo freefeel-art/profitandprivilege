@@ -29,3 +29,9 @@ public bodies, canonical/robots, fonts/images, menu and mobile behavior afterwar
 The root page and five existing public assets are the current known production
 source set; retain each before overlay. Cloudflare-managed robots.txt is a
 managed response, not a source file to copy into an asset upload.
+
+Published27October2026: source46b45fb, Worker versionf6552cdf-43bd-4ce3-8674-3b7eba1e2054
+at100%; pairedOLSPversionea83f8a8. Main priorversione7f4364b retained for rollback.
+Both site sourceHEADs/37bodies verified; production190/190resources and6/6browser
+views PASS. Exact frozenmainpackage/manifest and full private receipt:
+/home/yampa/.openclaw/workspace/reports/visual-unification-2026-10-27/release/ .
