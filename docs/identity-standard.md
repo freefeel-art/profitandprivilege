@@ -1,5 +1,15 @@
 # Profit & Privilege — author and brand identity standard
 
+## Shared publication contract — Owner2026-10-28
+
+For applicable P&P content read the existing canonical website contract:
+/home/yampa/olsp-research/data-gap-production-trial-2026-10-24/worktree/docs/CONTENT-AND-QUALITY-STANDARDS.md.
+It unifies publication quality, commercial transparency/CTA/link QA and three
+readiness levels, NOT research methods or permissions. Personal V1 identity,
+authorship/content approvals, site identity and production gates below remain.
+No new services/accounts/spend, DNS/hosting or production is authorized.
+
+
 Owner decision:25October2026. This is identity guidance, not a new editorial
 strategy, publication channel or production-release permission.
 

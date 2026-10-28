@@ -1,5 +1,8 @@
 # ProfitAndPrivilege
 
+Current P&P editorial/identity entrypoint: docs/identity-standard.md; it links the
+shared publication contract. Legacy architecture below is not release authority.
+
 ProfitAndPrivilege is an opportunity operating system.
 
 Mission:
