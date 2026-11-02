@@ -1,5 +1,39 @@
 # PROJECT STATUS
 
+## 2 November 2026 — apex navigation and sharing released
+
+Owner-requested bounded homepage/About update is published. Both pages now link
+to OLSP, MLMTraining, Chatbot Guides and Faucet in the upper navigation and footer.
+BestBuyBounty's homepage card and links were removed; its independent site was
+not changed. Chatbot Guides' obsolete development label was replaced by a direct
+link to the verified published site. Faucet is explicitly labelled an experiment.
+
+Lightweight, user-initiated native sharing and canonical Copy link controls were
+added without third-party widgets, tracking or automatic social publication.
+Unsupported/denied clipboard access offers manual copying. Native sharing is
+shown only when supported. About's approved story and all 20 unchanged published
+assets remain intact; the production package contains 24 assets in total.
+
+Source commit: f33fbdaf57b643fef28e0705c6c52f8593f3a011 on
+`fix/apex-navigation-20261102`; all nine delivered Git blobs were read back.
+Worker `profitandprivilege`, version `73e3291a-3e16-4f7f-9e63-046b0c887d41`,
+deployment `76e07f89-96ac-47c2-8f3f-a0abec9e7690`, 100% traffic.
+The version preview and public apex package match all 24 frozen asset hashes;
+www Home/About match too. Rollback: `15d182c2-55c2-4c7b-a3a4-76133f5456e9`.
+
+Verification: independent review PASS; 14 Python and 4 Node tests PASS; existing
+homepage browser regression suite PASS; 24 local and 24 production browser cases
+PASS (Home/About, 320–1440px, JavaScript on/off, 200% text), plus supported native
+share success/cancel/error branches. Ten unique editorial destinations returned
+HTTP200. Share API branches were tested without actually posting to social media;
+physical-device share sheets, Safari and Firefox were not certified. Dedicated
+Hermes Chrome/CDP9224 survived the test-client disconnect. Subdomain deployments,
+domain routes, credentials and production settings were unchanged.
+
+The older project-direction snapshot below is historical, not current apex
+routing or a renewed validator assignment. This scoped Owner request does not
+create standing permission for other main-domain changes.
+
 Last Updated: 2026-06-20
 
 ## Current Direction
