@@ -1,0 +1,28 @@
+/* Apex-only navigation and user-initiated sharing. Shared site bundles stay unchanged. */
+.pp-home .site-header .bar { flex-wrap: wrap; }
+.pp-home .site-header .site-nav { flex-wrap: wrap; min-width: 0; }
+.project-nav {
+  width: min(calc(100% - 2.5rem), 1232px);
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .4rem 1.4rem;
+  padding-block: .7rem;
+  border-bottom: 1px solid var(--line);
+}
+.project-nav > span { color: var(--muted, var(--ink-2)); font-size: .8rem; }
+.project-nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: .95rem; color: var(--brown, var(--gold-deep)); }
+.page-share { width: min(calc(100% - 2.5rem), 1232px); margin: 2rem auto; padding-block: 1.5rem; border-top: 1px solid var(--line); }
+.page-share label { display: block; margin-bottom: .7rem; font-weight: 600; }
+.share-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .7rem; }
+.share-actions input { flex: 1 1 18rem; width: 100%; min-width: 0; max-width: 30rem; min-height: 44px; padding: .65rem; font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 4px; }
+.share-actions button { min-height: 44px; padding: .65rem 1rem; font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--brown, var(--gold-deep)); border-radius: 4px; cursor: pointer; }
+.share-actions button:hover { background: var(--paper-deep, var(--surface-2)); }
+.page-share [hidden] { display: none !important; }
+.share-status { display: block; min-height: 1.7em; margin-top: .5rem; color: var(--muted, var(--ink-2)); }
+.site-footer.shell { flex-wrap: wrap; }
+.site-footer.shell nav { flex: 1 1 20rem; }
+.project-nav :focus-visible, .page-share :focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+@media (max-width: 640px) { .project-nav { gap: .3rem 1rem; } .project-nav > span { flex-basis: 100%; } }
+@media (max-width: 1000px) { .site-footer.shell nav { flex: initial; width: 100%; } }

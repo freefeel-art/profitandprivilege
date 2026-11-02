@@ -5,7 +5,7 @@ import subprocess
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = '80e5ad45672b1a58ad426219a4ba85aa04b0a6e4'
+BASE = '6703bc9051dbb87698fa37d186e9b5fa7397b9ac'
 
 
 class Document(HTMLParser):
@@ -45,21 +45,23 @@ class HomepageTests(unittest.TestCase):
         self.assertIn('>OLSP affiliate disclosure</a>', footer)
         self.assertNotIn('>Privacy</a>', footer)
         self.assertNotIn('>Guides</a>', footer)
-        self.assertNotIn('Chatbot Guides', footer)
+        self.assertIn('Chatbot Guides', footer)
+        self.assertNotIn('BestBuyBounty', self.html)
 
     def test_published_project_reading_is_directly_accessible(self):
         practice = self.html.split('id="practice"')[1].split('</section>')[0]
-        for href in ('https://bestbuybounty.com/neolife-hub/',
-                     'https://olsp.profitandprivilege.com/reviews/dataforseo-review/',
+        for href in ('https://olsp.profitandprivilege.com/reviews/dataforseo-review/',
                      'https://mlmtraining.profitandprivilege.com/reviews/mlmrod-cardly-training-review/'):
             with self.subTest(href=href):
                 self.assertIn(f'href="{href}"', practice)
-        self.assertEqual(practice.count('Start here:'), 3)
+        self.assertEqual(practice.count('Start here:'), 2)
+        for href in ('https://chatbotguides.profitandprivilege.com/', 'https://faucet.profitandprivilege.com/'):
+            self.assertIn(f'href="{href}"', practice)
 
     def test_protected_files_and_sections_are_unchanged(self):
         protected = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', BASE], cwd=ROOT, text=True).splitlines()
         for path in protected:
-            if path.startswith(('assets/', 'about/', 'docs/assets/')):
+            if path.startswith(('assets/', 'docs/assets/')):
                 with self.subTest(path=path):
                     self.assertEqual((ROOT / path).read_bytes(), baseline(path))
         old = baseline('index.html').decode()
@@ -69,9 +71,10 @@ class HomepageTests(unittest.TestCase):
                            ('<section aria-labelledby="research-title"', '</section>')]:
             self.assertEqual(self.html.split(start)[1].split(end)[0], old.split(start)[1].split(end)[0])
         self.assertEqual(self.html.count('<h1 '), 1)
-        self.assertIn('<p class="status practice-status">In Development</p>', self.html)
-        chatbot = self.html.split('<h3>Chatbot Guides</h3>')[1].split('</article>')[0]
-        self.assertNotIn('href=', chatbot)
+        old_about = baseline('about/index.html').decode()
+        new_about = (ROOT / 'about/index.html').read_text()
+        self.assertEqual(new_about.split('<article ')[1].split('</article>')[0],
+                         old_about.split('<article ')[1].split('</article>')[0])
 
     def test_all_fragment_targets_and_local_resources_exist(self):
         ids = [a['id'] for _, a in self.doc.elements if 'id' in a]

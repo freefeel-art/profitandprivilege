@@ -1,5 +1,5 @@
 // Run with PP_PLAYWRIGHT=/absolute/path/to/playwright-core node tests/browser_homepage.cjs /absolute/evidence-dir
-// Existing system Chrome only; isolated contexts and loopback. Never sends analytics or follows affiliate links.
+// Hermes's dedicated CDP browser only; own contexts and loopback. Never sends analytics or follows affiliate links.
 const { chromium } = require(process.env.PP_PLAYWRIGHT || 'playwright-core');
 const http = require('node:http');
 const fs = require('node:fs');
@@ -7,7 +7,7 @@ const path = require('node:path');
 const assert = require('node:assert/strict');
 const { execFileSync } = require('node:child_process');
 const root = path.resolve(__dirname, '..');
-const baseline = '80e5ad45672b1a58ad426219a4ba85aa04b0a6e4';
+const baseline = '6703bc9051dbb87698fa37d186e9b5fa7397b9ac';
 const output = path.resolve(process.argv[2]);
 fs.mkdirSync(output, { recursive: true });
 const mime = {'.html':'text/html', '.css':'text/css', '.js':'text/javascript', '.png':'image/png', '.woff2':'font/woff2'};
@@ -43,7 +43,7 @@ async function check(name, fn) { await fn(); report.cases.push(name); }
 (async () => {
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const origin = `http://127.0.0.1:${server.address().port}`;
-  browser = await chromium.launch({executablePath:process.env.PP_CHROME || '/usr/bin/google-chrome-stable', headless:true});
+  browser = await chromium.connectOverCDP('http://127.0.0.1:9224');
   report.browser = browser.version();
   for (const width of [320,375,390,768,860,861,1024,1440]) {
     const context = await browser.newContext({viewport:{width,height:900}, reducedMotion:'reduce'});

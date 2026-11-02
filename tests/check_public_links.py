@@ -12,9 +12,9 @@ from urllib.parse import urljoin, urlparse
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = '80e5ad45672b1a58ad426219a4ba85aa04b0a6e4'
+BASE = '6703bc9051dbb87698fa37d186e9b5fa7397b9ac'
 APEX = 'https://profitandprivilege.com/'
-ALLOWED = {'profitandprivilege.com', 'bestbuybounty.com', 'olsp.profitandprivilege.com', 'mlmtraining.profitandprivilege.com'}
+ALLOWED = {'profitandprivilege.com', 'bestbuybounty.com', 'olsp.profitandprivilege.com', 'mlmtraining.profitandprivilege.com', 'chatbotguides.profitandprivilege.com', 'faucet.profitandprivilege.com'}
 
 
 class Links(HTMLParser):
@@ -62,7 +62,9 @@ def main():
     with ThreadPoolExecutor(max_workers=4) as pool:
         links = list(pool.map(fetch, sorted(parser.urls)))
     paths = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', BASE], cwd=ROOT, text=True).splitlines()
-    protected = [p for p in paths if p.startswith(('assets/', 'about/', 'docs/assets/'))]
+    # About's navigation is intentionally changed; its article is protected by
+    # test_homepage and its complete released bytes by the deployment manifest.
+    protected = [p for p in paths if p.startswith(('assets/', 'docs/assets/'))]
     with ThreadPoolExecutor(max_workers=4) as pool:
         resources = list(pool.map(fetch, [urljoin(APEX, '/about/' if p == 'about/index.html' else p) for p in protected]))
     for p, result in zip(protected, resources):

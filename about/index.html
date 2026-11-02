@@ -8,6 +8,7 @@
   <link rel="canonical" href="https://profitandprivilege.com/about/">
   <meta name="robots" content="index, follow">
   <link rel="stylesheet" href="../assets/css/about.css">
+  <link rel="stylesheet" href="/assets/css/site-navigation.css">
   <style>/* Keep this page’s brand readable at 200% text on narrow screens. */ .site-header .brand { white-space: normal; }</style>
 </head>
 <body id="top">
@@ -19,6 +20,13 @@
       <a href="./" aria-current="page">About Me</a>
     </nav>
   </header>
+  <nav aria-label="Our sites" class="project-nav">
+    <span>Our sites</span>
+    <a href="https://olsp.profitandprivilege.com/" target="_blank" rel="noopener noreferrer">OLSP</a>
+    <a href="https://mlmtraining.profitandprivilege.com/" target="_blank" rel="noopener noreferrer">MLMTraining</a>
+    <a href="https://chatbotguides.profitandprivilege.com/" target="_blank" rel="noopener noreferrer">Chatbot Guides</a>
+    <a href="https://faucet.profitandprivilege.com/" target="_blank" rel="noopener noreferrer">Faucet · experiment</a>
+  </nav>
   <main id="main-content" class="shell" tabindex="-1">
     <header class="about-hero">
       <div><p class="eyebrow">About me · Jarmo Halonen</p><h1 id="about-title">The Thoughtful Man Behind <span>Profit &amp; Privilege</span></h1><p class="section-intro"><em>An ordinary man, a curious mind, and a lifetime of learning.</em></p></div>
@@ -209,9 +217,25 @@ Founder, Profit &amp; Privilege</p>
       <a class="text-link" href="../"><span aria-hidden="true">←</span> Back to Profit &amp; Privilege</a>
     </article>
   </main>
+  <aside aria-label="Share this page" class="page-share" data-page-share>
+    <label for="share-url">Share this page</label>
+    <div class="share-actions">
+      <input id="share-url" data-share-url type="text" readonly value="https://profitandprivilege.com/about/">
+      <button data-native-share type="button" hidden>Share…</button>
+      <button data-copy-link type="button" hidden>Copy link</button>
+    </div>
+    <span class="share-status" data-share-status role="status" aria-live="polite"></span>
+  </aside>
   <footer class="site-footer shell">
     <div><p class="brand">Profit <span>&amp;</span> Privilege</p><p class="footer-note">© 2026 Profit &amp; Privilege.</p></div>
+    <nav aria-label="Independent projects">
+      <a href="https://olsp.profitandprivilege.com/" target="_blank" rel="noopener noreferrer">OLSP reviews &amp; guides</a>
+      <a href="https://mlmtraining.profitandprivilege.com/" target="_blank" rel="noopener noreferrer">MLMTraining</a>
+      <a href="https://chatbotguides.profitandprivilege.com/" target="_blank" rel="noopener noreferrer">Chatbot Guides</a>
+      <a href="https://faucet.profitandprivilege.com/" target="_blank" rel="noopener noreferrer">Faucet · experiment</a>
+    </nav>
     <a class="text-link" href="#top">Back to top <span aria-hidden="true">↑</span></a>
   </footer>
+  <script defer src="/assets/js/page-share.js"></script>
 </body>
 </html>
