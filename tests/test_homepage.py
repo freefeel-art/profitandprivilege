@@ -5,7 +5,7 @@ import subprocess
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = '6703bc9051dbb87698fa37d186e9b5fa7397b9ac'
+BASE = '40fbe093decd4aa9fa9e9c69941c78c2b28725aa'
 
 
 class Document(HTMLParser):
@@ -55,7 +55,7 @@ class HomepageTests(unittest.TestCase):
             with self.subTest(href=href):
                 self.assertIn(f'href="{href}"', practice)
         self.assertEqual(practice.count('Start here:'), 2)
-        for href in ('https://chatbotguides.profitandprivilege.com/', 'https://faucet.profitandprivilege.com/'):
+        for href in ('https://chatbotguides.profitandprivilege.com/',):
             self.assertIn(f'href="{href}"', practice)
 
     def test_protected_files_and_sections_are_unchanged(self):

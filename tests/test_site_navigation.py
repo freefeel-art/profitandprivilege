@@ -1,4 +1,4 @@
-"""Public HTML contract for the four published P&P sites."""
+"""Public HTML contract for the three curated P&P editorial sites."""
 from html.parser import HTMLParser
 from pathlib import Path
 import unittest
@@ -8,7 +8,7 @@ SITES = {
     'https://olsp.profitandprivilege.com/',
     'https://mlmtraining.profitandprivilege.com/',
     'https://chatbotguides.profitandprivilege.com/',
-    'https://faucet.profitandprivilege.com/',
+
 }
 
 
@@ -46,6 +46,8 @@ class PublishedSitesTests(unittest.TestCase):
                         self.assertEqual(a.get('target'), '_blank')
                         self.assertEqual(set(a.get('rel', '').split()), {'noopener', 'noreferrer'})
             self.assertFalse(any('bestbuybounty' in a.get('href', '').lower() for a in doc.all_links))
+            self.assertFalse(any('faucet.profitandprivilege.com' in a.get('href', '').lower() for a in doc.all_links))
+            self.assertNotIn('Faucet', (ROOT / path).read_text())
 
 
 if __name__ == '__main__':

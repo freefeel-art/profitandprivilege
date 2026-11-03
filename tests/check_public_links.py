@@ -12,7 +12,7 @@ from urllib.parse import urljoin, urlparse
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = '6703bc9051dbb87698fa37d186e9b5fa7397b9ac'
+BASE = '40fbe093decd4aa9fa9e9c69941c78c2b28725aa'
 APEX = 'https://profitandprivilege.com/'
 ALLOWED = {'profitandprivilege.com', 'bestbuybounty.com', 'olsp.profitandprivilege.com', 'mlmtraining.profitandprivilege.com', 'chatbotguides.profitandprivilege.com', 'faucet.profitandprivilege.com'}
 

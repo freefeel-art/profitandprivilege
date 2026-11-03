@@ -7,7 +7,7 @@ const path = require('node:path');
 const assert = require('node:assert/strict');
 const { execFileSync } = require('node:child_process');
 const root = path.resolve(__dirname, '..');
-const baseline = '6703bc9051dbb87698fa37d186e9b5fa7397b9ac';
+const baseline = '40fbe093decd4aa9fa9e9c69941c78c2b28725aa';
 const output = path.resolve(process.argv[2]);
 fs.mkdirSync(output, { recursive: true });
 const mime = {'.html':'text/html', '.css':'text/css', '.js':'text/javascript', '.png':'image/png', '.woff2':'font/woff2'};
@@ -75,9 +75,24 @@ async function check(name, fn) { await fn(); report.cases.push(name); }
     await check(`${width}: footer Home stays on apex`,async()=>{
       await page.locator('footer a[href="/"]').click();assert.equal(page.url(),origin+'/');
     });
-    await check(`${width}: About round trip`,async()=>{
-      const r=await page.locator('footer a[href="/about/"]').click();
+    await check(`${width}: About round trip and unobscured skip-link keyboard focus`,async()=>{
+      await page.locator('footer a[href="/about/"]').click();
       assert.equal(page.url(),origin+'/about/');assert.equal(await page.locator('h1').count(),1);
+      await page.evaluate(()=>document.fonts.ready);
+      await page.keyboard.press('Tab');
+      const skip=page.locator('.skip-link');
+      assert.equal(await skip.evaluate(link=>link===document.activeElement),true);
+      const visibility=await skip.evaluate(link=>{
+        const r=link.getBoundingClientRect();
+        const left=Math.max(0,r.left),right=Math.min(innerWidth,r.right);
+        const top=Math.max(0,r.top),bottom=Math.min(innerHeight,r.bottom);
+        const hit=document.elementFromPoint((left+right)/2,(top+bottom)/2);
+        return {visibleArea:right>left&&bottom>top,unobscured:hit===link||link.contains(hit),hit:hit?.outerHTML.slice(0,200)};
+      });
+      assert.equal(visibility.visibleArea,true,`${width}: focused About skip-link must be in the viewport`);
+      assert.equal(visibility.unobscured,true,`${width}: focused About skip-link is covered by ${visibility.hit}`);
+      await page.keyboard.press('Enter');
+      assert.equal(await page.locator('#main-content').evaluate(e=>e===document.activeElement),true);
       await page.goto(origin+'/');
     });
     await check(`${width}: identity geometry preserved`,async()=>{
@@ -98,11 +113,44 @@ async function check(name, fn) { await fn(); report.cases.push(name); }
     });
     await context.close();
   }
+  for (const width of [320,1440]) for (const route of ['/', '/about/']) {
+    const context=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'});
+    await restrictToLoopback(context,origin);
+    const page=await context.newPage();
+    await page.goto(origin+route);await page.evaluate(()=>document.fonts.ready);
+    async function checkFocus(name,locator) {
+      await check(`${width}: ${route} ${name} keyboard-visible gold outline`,async()=>{
+        assert.equal(await locator.isVisible(),true);
+        const actual=await locator.evaluate(element=>{
+          const style=getComputedStyle(element);
+          return {active:element===document.activeElement,focusVisible:element.matches(':focus-visible'),
+            color:style.outlineColor,style:style.outlineStyle,width:style.outlineWidth,offset:style.outlineOffset};
+        });
+        assert.deepEqual(actual,{active:true,focusVisible:true,color:'rgb(184, 134, 43)',style:'solid',width:'3px',offset:'2px'});
+      });
+    }
+    await page.keyboard.press('Tab');
+    assert.equal(await page.locator('.skip-link').evaluate(e=>e===document.activeElement),true);
+    await page.keyboard.press('Tab');
+    await checkFocus('brand',page.locator('.apex-masthead .brand'));
+    if(width<=860) {
+      await page.keyboard.press('Tab');
+      await checkFocus('menu button',page.locator('#navToggle'));
+      await page.keyboard.press('Space');
+      assert.equal(await page.locator('#navToggle').getAttribute('aria-expanded'),'true');
+    }
+    const links=page.locator('.apex-masthead .site-nav a');
+    for(let i=0;i<await links.count();i++) {
+      await page.keyboard.press('Tab');
+      await checkFocus(`navigation ${i+1}`,links.nth(i));
+    }
+    await context.close();
+  }
   const context=await browser.newContext({javaScriptEnabled:false,viewport:{width:320,height:900}});
   await restrictToLoopback(context, origin);
   const page=await context.newPage();await page.goto(origin+'/');
   await check('no JavaScript: project content and footer navigation remain available',async()=>{
-    assert.equal(await page.locator('#practice article').count(),4);
+    assert.equal(await page.locator('#practice article').count(),3);
     assert.equal(await page.locator('footer a[href="#practice"]').isVisible(),true);
     assert.equal(await page.locator('a[href*="/reviews/dataforseo-review/"]').count(),1);
   });
