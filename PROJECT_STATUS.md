@@ -1,5 +1,50 @@
 # PROJECT STATUS
 
+## 3 November 2026 — masthead parity, curated sites and return links released
+
+Owner's follow-up is complete. About Me and the homepage now use the same
+scoped dark P&P masthead, brand mark, fonts and responsive menu. About's story,
+portrait and article styling remain unchanged. Keyboard fixes keep its focused
+skip link above the masthead and give brand/menu links the canonical gold outline.
+
+Faucet was removed from apex navigation, footers and the project card. The apex
+directory now contains OLSP, MLMTraining and Chatbot Guides. The independent
+Faucet experiment was not deleted, changed or deployed. Share controls remain.
+
+MLMTraining and Chatbot Guides now have one explicit P&P Home footer link on every
+rendered page, including their real 404 pages. Own Home and existing footer links
+remain intact. Removing the added anchor restores every HTML byte to baseline;
+all other assets remain unchanged. Canonical source branches were safely
+fast-forwarded while preserving inherited dirty work.
+
+Verified source delivery and production versions:
+- Apex: source `f7b6a244f92627f865ab87a0c25655cb72fa71ad`, branch
+  `fix/apex-masthead-20261102`, version `791e2f8d-d926-4bbc-bc33-a816c4b74ab7`.
+- MLMTraining: source `af58c2a59b926588d1a8e6cc15204d7467240296`, branch
+  `feat/mlmtraining-foundation`, version `0f7d0bdf-b4a8-4eda-86cf-4507bce207b0`.
+- Chatbot Guides: source `790c5a7e6fe8278d0bd349e1674a54c94069ea8d`, branch
+  `feat/fastbots-preparation-20261024`, version `c2dd4926-9677-45ad-b60d-9d5a707039f7`.
+
+All three versions have 100% traffic and exact public artifact readback. Scoped
+Git HEADs/blobs and skipped native CI checks were verified. Settings, routes,
+domains, credentials and unrelated production sites were preserved.
+
+QA: independent source reviews PASS; apex 15 Python and 4 Node tests, 90 browser
+regressions, 24 final local and 24 production layout/share cases PASS. Both legacy
+About accessibility defects were reproduced RED before their targeted corrections.
+Footer source builds/contracts, reversible byte-deltas and local browser cases
+PASS; 8 actual public keyboard/popup cases loaded the real main homepage with
+null opener. All 119 previously audited safe subdomain routes return HTTP200 and
+include the exact main-home link. OLSP and Faucet already had this link and were
+not modified. Conversion paths remain excluded from this audit.
+
+Limits: static browser/HTTP readback is verified, not a Safari/Firefox/physical-
+device certification. Installed workerd cannot emulate the existing subdomain
+compatibility date; settings were retained and frozen HTTP plus real production
+checks were used. No new tracking, social posting or business outcome is claimed.
+This dated task supersedes the earlier Faucet directory entry below, not the
+independent experiment's existence or any standing authority boundary.
+
 ## 2 November 2026 — apex navigation and sharing released
 
 Owner-requested bounded homepage/About update is published. Both pages now link
